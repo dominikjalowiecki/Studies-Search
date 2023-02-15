@@ -1,0 +1,11 @@
+venv
+media
+static
+frontend
+*.sqlite3
+.env
+.gitignore
+.dockerignore
+Dockerfile.prod
+docker-compose.yaml
+postgresql

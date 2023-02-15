@@ -1,0 +1,16 @@
+FROM python:3.10-alpine
+
+WORKDIR /usr/src/app
+
+ENV DEBUG False
+
+COPY requirements.txt ./
+RUN apk update
+RUN apk add git
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . ./
+
+EXPOSE 8000
+
+CMD ['gunicorn', '--bind', '0.0.0.0:8000' 'backendApi.wsgi']
