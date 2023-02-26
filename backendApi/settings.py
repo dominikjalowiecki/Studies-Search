@@ -75,10 +75,6 @@ LOGGING = {
 	}
 }
 
-# ADMINS = ('', ''),
-
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -89,6 +85,18 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')]) if not DEBUG else ['*']
+
+def cast_admins(v):
+    admins = []
+    for s in v.split(';'):
+        admin = s.split(',')
+        if len(admin) == 2:
+            admins.append((admin[0].strip(), admin[1].strip()))
+
+    return admins
+
+if not DEBUG:
+    ADMINS = config('ADMINS', cast=cast_admins)
 
 # Application definition
 

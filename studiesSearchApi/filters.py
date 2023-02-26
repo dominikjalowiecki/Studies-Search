@@ -1,8 +1,8 @@
 import django_filters
-from studiesSearchApi.models import Faculities
+from studiesSearchApi.models import Faculties
 
 class FacuilitesFilter(django_filters.FilterSet):
-    faculity = django_filters.CharFilter(
+    faculty = django_filters.CharFilter(
         field_name='name',
         lookup_expr='contains'
     )
@@ -20,5 +20,5 @@ class FacuilitesFilter(django_filters.FilterSet):
     )
 
     class Meta:
-        model = Faculities
-        fields = ('faculity', 'school', 'city', 'course')
+        model = Faculties
+        fields = ('faculty', 'school', 'city', 'course')

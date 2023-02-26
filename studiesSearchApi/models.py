@@ -58,8 +58,8 @@ class Cities(models.Model):
 
 class Courses(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    faculities = models.ManyToManyField(
-        'Faculities',
+    faculties = models.ManyToManyField(
+        'Faculties',
         related_name='courses'
     )
 
@@ -70,19 +70,19 @@ class Courses(models.Model):
         return self.name
 
 
-class Faculities(models.Model):
+class Faculties(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(max_length=500)
     school = models.ForeignKey(
         'Schools',
         on_delete=models.PROTECT,
-        related_name='faculities',
+        related_name='faculties',
         null=True
     )
     city = models.ForeignKey(
         'Cities',
         on_delete=models.SET_NULL,
-        related_name='faculities',
+        related_name='faculties',
         null=True
     )
     hyperlink = models.URLField(null=True)
@@ -114,15 +114,15 @@ class Faculities(models.Model):
     def __str__(self):
         return self.name
 
-class FaculitiesImages(models.Model):
+class FacultiesImages(models.Model):
     if not settings.DEBUG:  
         from gdstorage.storage import GoogleDriveStorage
         gd_storage = GoogleDriveStorage()
         image = models.ImageField(upload_to='images', storage=gd_storage)
     else:
         image = models.ImageField(upload_to='images')
-    faculity = models.ForeignKey(
-        'Faculities',
+    faculty = models.ForeignKey(
+        'Faculties',
         on_delete=models.CASCADE,
         related_name='images'
     )
@@ -133,7 +133,7 @@ class Comments(models.Model):
         on_delete=models.CASCADE,
     )
     entry = models.ForeignKey(
-        'Faculities',
+        'Faculties',
         on_delete=models.CASCADE,
         related_name='comments',
     )

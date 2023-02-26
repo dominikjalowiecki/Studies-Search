@@ -833,7 +833,7 @@
     }
   }
 };
-            defs["FaculitiesList"] = {
+            defs["FacultiesList"] = {
   "required" : [ "city", "courses", "name", "school" ],
   "type" : "object",
   "properties" : {
@@ -868,7 +868,7 @@
     }
   }
 };
-            defs["FaculitiesRetrieve"] = {
+            defs["FacultiesRetrieve"] = {
   "required" : [ "add_city", "add_school", "description", "name" ],
   "type" : "object",
   "properties" : {
@@ -1007,7 +1007,7 @@
     "results" : {
       "type" : "array",
       "items" : {
-        "$ref" : "#/components/schemas/FaculitiesList"
+        "$ref" : "#/components/schemas/FacultiesList"
       }
     }
   }
@@ -1176,21 +1176,21 @@
                     <li data-group="Courses" data-name="listCourses" class="">
                       <a href="#api-Courses-listCourses">listCourses</a>
                     </li>
-                  <li class="nav-header" data-group="Faculities"><a href="#api-Faculities">API Methods - Faculities</a></li>
-                    <li data-group="Faculities" data-name="createFaculities" class="">
-                      <a href="#api-Faculities-createFaculities">createFaculities</a>
+                  <li class="nav-header" data-group="Faculties"><a href="#api-Faculties">API Methods - Faculties</a></li>
+                    <li data-group="Faculties" data-name="createFaculties" class="">
+                      <a href="#api-Faculties-createFaculties">createFaculties</a>
                     </li>
-                    <li data-group="Faculities" data-name="listFaculities" class="">
-                      <a href="#api-Faculities-listFaculities">listFaculities</a>
+                    <li data-group="Faculties" data-name="listFaculties" class="">
+                      <a href="#api-Faculties-listFaculties">listFaculties</a>
                     </li>
-                    <li data-group="Faculities" data-name="partialUpdateFaculities" class="">
-                      <a href="#api-Faculities-partialUpdateFaculities">partialUpdateFaculities</a>
+                    <li data-group="Faculties" data-name="partialUpdateFaculties" class="">
+                      <a href="#api-Faculties-partialUpdateFaculties">partialUpdateFaculties</a>
                     </li>
-                    <li data-group="Faculities" data-name="retrieveFaculities" class="">
-                      <a href="#api-Faculities-retrieveFaculities">retrieveFaculities</a>
+                    <li data-group="Faculties" data-name="retrieveFaculties" class="">
+                      <a href="#api-Faculties-retrieveFaculties">retrieveFaculties</a>
                     </li>
-                    <li data-group="Faculities" data-name="updateFaculities" class="">
-                      <a href="#api-Faculities-updateFaculities">updateFaculities</a>
+                    <li data-group="Faculties" data-name="updateFaculties" class="">
+                      <a href="#api-Faculties-updateFaculties">updateFaculties</a>
                     </li>
                   <li class="nav-header" data-group="Filters"><a href="#api-Filters">API Methods - Filters</a></li>
                     <li data-group="Filters" data-name="listFilters" class="">
@@ -3165,12 +3165,12 @@ except ApiException as e:
                       </div>
                       <hr>
                   </section>
-                <section id="api-Faculities">
-                  <h1>Faculities</h1>
-                    <div id="api-Faculities-createFaculities">
-                      <article id="api-Faculities-createFaculities-0" data-group="User" data-name="createFaculities" data-version="0">
+                <section id="api-Faculties">
+                  <h1>Faculties</h1>
+                    <div id="api-Faculties-createFaculties">
+                      <article id="api-Faculties-createFaculties-0" data-group="User" data-name="createFaculties" data-version="0">
                         <div class="pull-left">
-                          <h1>createFaculities</h1>
+                          <h1>createFaculties</h1>
                           <p></p>
                         </div>
                         <div class="pull-right"></div>
@@ -3179,90 +3179,90 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/api/faculities/</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/api/faculties/</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Faculities-createFaculities-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-createFaculities-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-createFaculities-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Faculities-createFaculities-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Faculties-createFaculties-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-createFaculties-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-createFaculties-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faculties-createFaculties-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Faculities-createFaculities-0-curl">
+                          <div class="tab-pane active" id="examples-Faculties-createFaculties-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X POST\
  -H "Authorization: Bearer [[accessToken]]"\
 -H "Accept: application/json"\
 -H "Content-Type: application/json,application/x-www-form-urlencoded,multipart/form-data"\
-"https://djalowiecki.toadres.pl/studies-search/api/api/faculities/"</code></pre>
+"https://djalowiecki.toadres.pl/studies-search/api/api/faculties/"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Faculities-createFaculities-0-java">
+                          <div class="tab-pane" id="examples-Faculties-createFaculties-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.FaculitiesApi;
+import io.swagger.client.api.FacultiesApi;
 
 import java.io.File;
 import java.util.*;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        FaculitiesRetrieve body = ; // FaculitiesRetrieve | 
+        FacultiesApi apiInstance = new FacultiesApi();
+        FacultiesRetrieve body = ; // FacultiesRetrieve | 
         try {
-            FaculitiesRetrieve result = apiInstance.createFaculities(body);
+            FacultiesRetrieve result = apiInstance.createFaculties(body);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#createFaculities");
+            System.err.println("Exception when calling FacultiesApi#createFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Faculities-createFaculities-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaculitiesApi;
+                          <div class="tab-pane" id="examples-Faculties-createFaculties-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FacultiesApi;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        FaculitiesRetrieve body = ; // FaculitiesRetrieve | 
+        FacultiesApi apiInstance = new FacultiesApi();
+        FacultiesRetrieve body = ; // FacultiesRetrieve | 
         try {
-            FaculitiesRetrieve result = apiInstance.createFaculities(body);
+            FacultiesRetrieve result = apiInstance.createFaculties(body);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#createFaculities");
+            System.err.println("Exception when calling FacultiesApi#createFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Faculities-createFaculities-0-groovy">
+  <div class="tab-pane" id="examples-Faculties-createFaculties-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Faculities-createFaculities-0-objc">
+                            <div class="tab-pane" id="examples-Faculties-createFaculties-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
-FaculitiesRetrieve *body = ; //  (optional)
+FacultiesRetrieve *body = ; //  (optional)
 
-FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
+FacultiesApi *apiInstance = [[FacultiesApi alloc] init];
 
-[apiInstance createFaculitiesWith:body
-              completionHandler: ^(FaculitiesRetrieve output, NSError* error) {
+[apiInstance createFacultiesWith:body
+              completionHandler: ^(FacultiesRetrieve output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -3273,14 +3273,14 @@ FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-createFaculities-0-javascript">
+                            <div class="tab-pane" id="examples-Faculties-createFaculties-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var StudiesSearchApi = require('studies_search_api');
 var defaultClient = StudiesSearchApi.ApiClient.instance;
 
 
-var api = new StudiesSearchApi.FaculitiesApi()
+var api = new StudiesSearchApi.FacultiesApi()
 var opts = { 
-  'body':  // {{FaculitiesRetrieve}} 
+  'body':  // {{FacultiesRetrieve}} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -3289,14 +3289,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.createFaculities(opts, callback);
+api.createFaculties(opts, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Faculities-createFaculities-0-angular">
+                            <!--<div class="tab-pane" id="examples-Faculties-createFaculties-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Faculities-createFaculities-0-csharp">
+                            <div class="tab-pane" id="examples-Faculties-createFaculties-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -3305,23 +3305,23 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class createFaculitiesExample
+    public class createFacultiesExample
     {
         public void main()
         {
 
 
-            var apiInstance = new FaculitiesApi();
-            var body = new FaculitiesRetrieve(); // FaculitiesRetrieve |  (optional) 
+            var apiInstance = new FacultiesApi();
+            var body = new FacultiesRetrieve(); // FacultiesRetrieve |  (optional) 
 
             try
             {
-                FaculitiesRetrieve result = apiInstance.createFaculities(body);
+                FacultiesRetrieve result = apiInstance.createFaculties(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaculitiesApi.createFaculities: " + e.Message );
+                Debug.Print("Exception when calling FacultiesApi.createFaculties: " + e.Message );
             }
         }
     }
@@ -3329,42 +3329,42 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-createFaculities-0-php">
+                            <div class="tab-pane" id="examples-Faculties-createFaculties-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$api_instance = new Swagger\Client\ApiFaculitiesApi();
-$body = ; // FaculitiesRetrieve | 
+$api_instance = new Swagger\Client\ApiFacultiesApi();
+$body = ; // FacultiesRetrieve | 
 
 try {
-    $result = $api_instance->createFaculities($body);
+    $result = $api_instance->createFaculties($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaculitiesApi->createFaculities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FacultiesApi->createFaculties: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-createFaculities-0-perl">
+                            <div class="tab-pane" id="examples-Faculties-createFaculties-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::FaculitiesApi;
+use WWW::SwaggerClient::FacultiesApi;
 
 
-my $api_instance = WWW::SwaggerClient::FaculitiesApi->new();
-my $body = WWW::SwaggerClient::Object::FaculitiesRetrieve->new(); # FaculitiesRetrieve | 
+my $api_instance = WWW::SwaggerClient::FacultiesApi->new();
+my $body = WWW::SwaggerClient::Object::FacultiesRetrieve->new(); # FacultiesRetrieve | 
 
 eval { 
-    my $result = $api_instance->createFaculities(body => $body);
+    my $result = $api_instance->createFaculties(body => $body);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling FaculitiesApi->createFaculities: $@\n";
+    warn "Exception when calling FacultiesApi->createFaculties: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-createFaculities-0-python">
+                            <div class="tab-pane" id="examples-Faculties-createFaculties-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -3373,14 +3373,14 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.FaculitiesApi()
-body =  # FaculitiesRetrieve |  (optional)
+api_instance = swagger_client.FacultiesApi()
+body =  # FacultiesRetrieve |  (optional)
 
 try: 
-    api_response = api_instance.create_faculities(body=body)
+    api_response = api_instance.create_faculties(body=body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling FaculitiesApi->createFaculities: %s\n" % e)</code></pre>
+    print("Exception when calling FacultiesApi->createFaculties: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -3404,17 +3404,17 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     },
     "application/x-www-form-urlencoded" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     },
     "multipart/form-data" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     }
   }
@@ -3431,12 +3431,12 @@ except ApiException as e:
                                   }
                                 
                                   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_createFaculities_body');
+                                  var result = $('#d2e199_createFaculties_body');
                                   result.empty();
                                   result.append(view.render());
                                 });
                                 </script>
-                                <div id="d2e199_createFaculities_body"></div>
+                                <div id="d2e199_createFaculties_body"></div>
                                 </td>
                                 </tr>
                             </table>
@@ -3451,7 +3451,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_id">
+                                      <div id="d2e199_createFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3467,7 +3467,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_name">
+                                      <div id="d2e199_createFaculties_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3483,7 +3483,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_description">
+                                      <div id="d2e199_createFaculties_description">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3499,7 +3499,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_school">
+                                      <div id="d2e199_createFaculties_school">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3515,7 +3515,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_city">
+                                      <div id="d2e199_createFaculties_city">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3531,7 +3531,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_hyperlink">
+                                      <div id="d2e199_createFaculties_hyperlink">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3550,7 +3550,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_images">
+                                      <div id="d2e199_createFaculties_images">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3566,7 +3566,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_courses">
+                                      <div id="d2e199_createFaculties_courses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3582,7 +3582,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_addCourses">
+                                      <div id="d2e199_createFaculties_addCourses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3598,7 +3598,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_addSchool">
+                                      <div id="d2e199_createFaculties_addSchool">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3614,7 +3614,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_addCity">
+                                      <div id="d2e199_createFaculties_addCity">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3630,7 +3630,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_uploadedImages">
+                                      <div id="d2e199_createFaculties_uploadedImages">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3649,7 +3649,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_comments">
+                                      <div id="d2e199_createFaculties_comments">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3665,7 +3665,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_modificatedBy">
+                                      <div id="d2e199_createFaculties_modificatedBy">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3681,7 +3681,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_modificationDate">
+                                      <div id="d2e199_createFaculties_modificationDate">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3700,7 +3700,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_id">
+                                      <div id="d2e199_createFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3716,7 +3716,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_name">
+                                      <div id="d2e199_createFaculties_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3732,7 +3732,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_description">
+                                      <div id="d2e199_createFaculties_description">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3748,7 +3748,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_school">
+                                      <div id="d2e199_createFaculties_school">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3764,7 +3764,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_city">
+                                      <div id="d2e199_createFaculties_city">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3780,7 +3780,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_hyperlink">
+                                      <div id="d2e199_createFaculties_hyperlink">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3799,7 +3799,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_images">
+                                      <div id="d2e199_createFaculties_images">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3815,7 +3815,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_courses">
+                                      <div id="d2e199_createFaculties_courses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3831,7 +3831,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_addCourses">
+                                      <div id="d2e199_createFaculties_addCourses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3847,7 +3847,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_addSchool">
+                                      <div id="d2e199_createFaculties_addSchool">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3863,7 +3863,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_addCity">
+                                      <div id="d2e199_createFaculties_addCity">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3879,7 +3879,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_uploadedImages">
+                                      <div id="d2e199_createFaculties_uploadedImages">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3898,7 +3898,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_comments">
+                                      <div id="d2e199_createFaculties_comments">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3914,7 +3914,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_modificatedBy">
+                                      <div id="d2e199_createFaculties_modificatedBy">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3930,7 +3930,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFaculities_modificationDate">
+                                      <div id="d2e199_createFaculties_modificationDate">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -3953,14 +3953,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-createFaculities-201-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-createFaculties-201-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-createFaculities-201-schema">
-                                  <div id='responses-createFaculities-201-schema-201' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-createFaculties-201-schema">
+                                  <div id='responses-createFaculties-201-schema-201' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -3968,7 +3968,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     }
   }
@@ -3986,14 +3986,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-createFaculities-201-schema-data').val(stringify(schema));
-                                        var result = $('#responses-createFaculities-201-schema-201');
+                                        $('#responses-createFaculties-201-schema-data').val(stringify(schema));
+                                        var result = $('#responses-createFaculties-201-schema-201');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-createFaculities-201-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-createFaculties-201-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -4008,10 +4008,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-Faculities-listFaculities">
-                      <article id="api-Faculities-listFaculities-0" data-group="User" data-name="listFaculities" data-version="0">
+                    <div id="api-Faculties-listFaculties">
+                      <article id="api-Faculties-listFaculties-0" data-group="User" data-name="listFaculties" data-version="0">
                         <div class="pull-left">
-                          <h1>listFaculities</h1>
+                          <h1>listFaculties</h1>
                           <p></p>
                         </div>
                         <div class="pull-right"></div>
@@ -4020,97 +4020,97 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/faculities/</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/faculties/</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Faculities-listFaculities-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-listFaculities-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-listFaculities-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Faculities-listFaculities-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Faculties-listFaculties-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-listFaculties-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-listFaculties-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faculties-listFaculties-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Faculities-listFaculities-0-curl">
+                          <div class="tab-pane active" id="examples-Faculties-listFaculties-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://djalowiecki.toadres.pl/studies-search/api/api/faculities/?page=&faculity=&school=&city=&course="</code></pre>
+"https://djalowiecki.toadres.pl/studies-search/api/api/faculties/?page=&faculty=&school=&city=&course="</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Faculities-listFaculities-0-java">
+                          <div class="tab-pane" id="examples-Faculties-listFaculties-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.FaculitiesApi;
+import io.swagger.client.api.FacultiesApi;
 
 import java.io.File;
 import java.util.*;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
         
-        FaculitiesApi apiInstance = new FaculitiesApi();
+        FacultiesApi apiInstance = new FacultiesApi();
         Integer page = 56; // Integer | A page number within the paginated result set.
-        String faculity = faculity_example; // String | faculity
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            inline_response_200 result = apiInstance.listFaculities(page, faculity, school, city, course);
+            inline_response_200 result = apiInstance.listFaculties(page, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#listFaculities");
+            System.err.println("Exception when calling FacultiesApi#listFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Faculities-listFaculities-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaculitiesApi;
+                          <div class="tab-pane" id="examples-Faculties-listFaculties-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FacultiesApi;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
-        FaculitiesApi apiInstance = new FaculitiesApi();
+        FacultiesApi apiInstance = new FacultiesApi();
         Integer page = 56; // Integer | A page number within the paginated result set.
-        String faculity = faculity_example; // String | faculity
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            inline_response_200 result = apiInstance.listFaculities(page, faculity, school, city, course);
+            inline_response_200 result = apiInstance.listFaculties(page, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#listFaculities");
+            System.err.println("Exception when calling FacultiesApi#listFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Faculities-listFaculities-0-groovy">
+  <div class="tab-pane" id="examples-Faculties-listFaculties-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Faculities-listFaculities-0-objc">
+                            <div class="tab-pane" id="examples-Faculties-listFaculties-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Integer *page = 56; // A page number within the paginated result set. (optional)
-String *faculity = faculity_example; // faculity (optional)
+String *faculty = faculty_example; // faculty (optional)
 String *school = school_example; // school (optional)
 String *city = city_example; // city (optional)
 String *course = course_example; // course (optional)
 
-FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
+FacultiesApi *apiInstance = [[FacultiesApi alloc] init];
 
-[apiInstance listFaculitiesWith:page
-    faculity:faculity
+[apiInstance listFacultiesWith:page
+    faculty:faculty
     school:school
     city:city
     course:course
@@ -4125,13 +4125,13 @@ FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-listFaculities-0-javascript">
+                            <div class="tab-pane" id="examples-Faculties-listFaculties-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var StudiesSearchApi = require('studies_search_api');
 
-var api = new StudiesSearchApi.FaculitiesApi()
+var api = new StudiesSearchApi.FacultiesApi()
 var opts = { 
   'page': 56, // {{Integer}} A page number within the paginated result set.
-  'faculity': faculity_example, // {{String}} faculity
+  'faculty': faculty_example, // {{String}} faculty
   'school': school_example, // {{String}} school
   'city': city_example, // {{String}} city
   'course': course_example // {{String}} course
@@ -4143,14 +4143,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.listFaculities(opts, callback);
+api.listFaculties(opts, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Faculities-listFaculities-0-angular">
+                            <!--<div class="tab-pane" id="examples-Faculties-listFaculties-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Faculities-listFaculities-0-csharp">
+                            <div class="tab-pane" id="examples-Faculties-listFaculties-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -4159,26 +4159,26 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class listFaculitiesExample
+    public class listFacultiesExample
     {
         public void main()
         {
 
-            var apiInstance = new FaculitiesApi();
+            var apiInstance = new FacultiesApi();
             var page = 56;  // Integer | A page number within the paginated result set. (optional) 
-            var faculity = faculity_example;  // String | faculity (optional) 
+            var faculty = faculty_example;  // String | faculty (optional) 
             var school = school_example;  // String | school (optional) 
             var city = city_example;  // String | city (optional) 
             var course = course_example;  // String | course (optional) 
 
             try
             {
-                inline_response_200 result = apiInstance.listFaculities(page, faculity, school, city, course);
+                inline_response_200 result = apiInstance.listFaculties(page, faculty, school, city, course);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaculitiesApi.listFaculities: " + e.Message );
+                Debug.Print("Exception when calling FacultiesApi.listFaculties: " + e.Message );
             }
         }
     }
@@ -4186,48 +4186,48 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-listFaculities-0-php">
+                            <div class="tab-pane" id="examples-Faculties-listFaculties-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\ApiFaculitiesApi();
+$api_instance = new Swagger\Client\ApiFacultiesApi();
 $page = 56; // Integer | A page number within the paginated result set.
-$faculity = faculity_example; // String | faculity
+$faculty = faculty_example; // String | faculty
 $school = school_example; // String | school
 $city = city_example; // String | city
 $course = course_example; // String | course
 
 try {
-    $result = $api_instance->listFaculities($page, $faculity, $school, $city, $course);
+    $result = $api_instance->listFaculties($page, $faculty, $school, $city, $course);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaculitiesApi->listFaculities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FacultiesApi->listFaculties: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-listFaculities-0-perl">
+                            <div class="tab-pane" id="examples-Faculties-listFaculties-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::FaculitiesApi;
+use WWW::SwaggerClient::FacultiesApi;
 
-my $api_instance = WWW::SwaggerClient::FaculitiesApi->new();
+my $api_instance = WWW::SwaggerClient::FacultiesApi->new();
 my $page = 56; # Integer | A page number within the paginated result set.
-my $faculity = faculity_example; # String | faculity
+my $faculty = faculty_example; # String | faculty
 my $school = school_example; # String | school
 my $city = city_example; # String | city
 my $course = course_example; # String | course
 
 eval { 
-    my $result = $api_instance->listFaculities(page => $page, faculity => $faculity, school => $school, city => $city, course => $course);
+    my $result = $api_instance->listFaculties(page => $page, faculty => $faculty, school => $school, city => $city, course => $course);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling FaculitiesApi->listFaculities: $@\n";
+    warn "Exception when calling FacultiesApi->listFaculties: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-listFaculities-0-python">
+                            <div class="tab-pane" id="examples-Faculties-listFaculties-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -4235,18 +4235,18 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FaculitiesApi()
+api_instance = swagger_client.FacultiesApi()
 page = 56 # Integer | A page number within the paginated result set. (optional)
-faculity = faculity_example # String | faculity (optional)
+faculty = faculty_example # String | faculty (optional)
 school = school_example # String | school (optional)
 city = city_example # String | city (optional)
 course = course_example # String | course (optional)
 
 try: 
-    api_response = api_instance.list_faculities(page=page, faculity=faculity, school=school, city=city, course=course)
+    api_response = api_instance.list_faculties(page=page, faculty=faculty, school=school, city=city, course=course)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling FaculitiesApi->listFaculities: %s\n" % e)</code></pre>
+    print("Exception when calling FacultiesApi->listFaculties: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -4266,7 +4266,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_listFaculities_page">
+                                    <div id="d2e199_listFaculties_page">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -4281,11 +4281,11 @@ except ApiException as e:
                                     </div>
                                 </td>
                                 </tr>
-                                <tr><td style="width:150px;">faculity</td>
+                                <tr><td style="width:150px;">faculty</td>
                                 <td>
                                 
                                 
-                                    <div id="d2e199_listFaculities_faculity">
+                                    <div id="d2e199_listFaculties_faculty">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -4293,7 +4293,7 @@ except ApiException as e:
                                                 </span>
                                 
                                                     <div class="inner description">
-                                                        faculity
+                                                        faculty
                                                     </div>
                                             </div>
                                         </div>
@@ -4304,7 +4304,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_listFaculities_school">
+                                    <div id="d2e199_listFaculties_school">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -4323,7 +4323,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_listFaculities_city">
+                                    <div id="d2e199_listFaculties_city">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -4342,7 +4342,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_listFaculities_course">
+                                    <div id="d2e199_listFaculties_course">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -4364,14 +4364,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-listFaculities-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-listFaculties-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-listFaculities-200-schema">
-                                  <div id='responses-listFaculities-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-listFaculties-200-schema">
+                                  <div id='responses-listFaculties-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -4397,24 +4397,24 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-listFaculities-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-listFaculities-200-schema-200');
+                                        $('#responses-listFaculties-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-listFaculties-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-listFaculities-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-listFaculties-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
                         </article>
                       </div>
                       <hr>
-                    <div id="api-Faculities-partialUpdateFaculities">
-                      <article id="api-Faculities-partialUpdateFaculities-0" data-group="User" data-name="partialUpdateFaculities" data-version="0">
+                    <div id="api-Faculties-partialUpdateFaculties">
+                      <article id="api-Faculties-partialUpdateFaculties-0" data-group="User" data-name="partialUpdateFaculties" data-version="0">
                         <div class="pull-left">
-                          <h1>partialUpdateFaculities</h1>
+                          <h1>partialUpdateFaculties</h1>
                           <p></p>
                         </div>
                         <div class="pull-right"></div>
@@ -4423,110 +4423,110 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="patch"><code><span class="pln">/api/faculities/{id}/</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="patch"><code><span class="pln">/api/faculties/{id}/</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Faculities-partialUpdateFaculities-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Faculities-partialUpdateFaculities-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Faculties-partialUpdateFaculties-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faculties-partialUpdateFaculties-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Faculities-partialUpdateFaculities-0-curl">
+                          <div class="tab-pane active" id="examples-Faculties-partialUpdateFaculties-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X PATCH\
  -H "Authorization: Bearer [[accessToken]]"\
 -H "Accept: application/json"\
 -H "Content-Type: application/json,application/x-www-form-urlencoded,multipart/form-data"\
-"https://djalowiecki.toadres.pl/studies-search/api/api/faculities/{id}/?faculity=&school=&city=&course="</code></pre>
+"https://djalowiecki.toadres.pl/studies-search/api/api/faculties/{id}/?faculty=&school=&city=&course="</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-java">
+                          <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.FaculitiesApi;
+import io.swagger.client.api.FacultiesApi;
 
 import java.io.File;
 import java.util.*;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        String id = id_example; // String | A unique integer value identifying this faculities.
-        FaculitiesRetrieve body = ; // FaculitiesRetrieve | 
-        String faculity = faculity_example; // String | faculity
+        FacultiesApi apiInstance = new FacultiesApi();
+        String id = id_example; // String | A unique integer value identifying this faculties.
+        FacultiesRetrieve body = ; // FacultiesRetrieve | 
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            FaculitiesRetrieve result = apiInstance.partialUpdateFaculities(id, body, faculity, school, city, course);
+            FacultiesRetrieve result = apiInstance.partialUpdateFaculties(id, body, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#partialUpdateFaculities");
+            System.err.println("Exception when calling FacultiesApi#partialUpdateFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaculitiesApi;
+                          <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FacultiesApi;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        String id = id_example; // String | A unique integer value identifying this faculities.
-        FaculitiesRetrieve body = ; // FaculitiesRetrieve | 
-        String faculity = faculity_example; // String | faculity
+        FacultiesApi apiInstance = new FacultiesApi();
+        String id = id_example; // String | A unique integer value identifying this faculties.
+        FacultiesRetrieve body = ; // FacultiesRetrieve | 
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            FaculitiesRetrieve result = apiInstance.partialUpdateFaculities(id, body, faculity, school, city, course);
+            FacultiesRetrieve result = apiInstance.partialUpdateFaculties(id, body, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#partialUpdateFaculities");
+            System.err.println("Exception when calling FacultiesApi#partialUpdateFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-groovy">
+  <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-objc">
+                            <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
-String *id = id_example; // A unique integer value identifying this faculities.
-FaculitiesRetrieve *body = ; //  (optional)
-String *faculity = faculity_example; // faculity (optional)
+String *id = id_example; // A unique integer value identifying this faculties.
+FacultiesRetrieve *body = ; //  (optional)
+String *faculty = faculty_example; // faculty (optional)
 String *school = school_example; // school (optional)
 String *city = city_example; // city (optional)
 String *course = course_example; // course (optional)
 
-FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
+FacultiesApi *apiInstance = [[FacultiesApi alloc] init];
 
-[apiInstance partialUpdateFaculitiesWith:id
+[apiInstance partialUpdateFacultiesWith:id
     body:body
-    faculity:faculity
+    faculty:faculty
     school:school
     city:city
     course:course
-              completionHandler: ^(FaculitiesRetrieve output, NSError* error) {
+              completionHandler: ^(FacultiesRetrieve output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -4537,16 +4537,16 @@ FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-javascript">
+                            <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var StudiesSearchApi = require('studies_search_api');
 var defaultClient = StudiesSearchApi.ApiClient.instance;
 
 
-var api = new StudiesSearchApi.FaculitiesApi()
-var id = id_example; // {{String}} A unique integer value identifying this faculities.
+var api = new StudiesSearchApi.FacultiesApi()
+var id = id_example; // {{String}} A unique integer value identifying this faculties.
 var opts = { 
-  'body':  // {{FaculitiesRetrieve}} 
-  'faculity': faculity_example // {{String}} faculity
+  'body':  // {{FacultiesRetrieve}} 
+  'faculty': faculty_example // {{String}} faculty
   'school': school_example // {{String}} school
   'city': city_example // {{String}} city
   'course': course_example // {{String}} course
@@ -4558,14 +4558,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.partialUpdateFaculities(id, opts, callback);
+api.partialUpdateFaculties(id, opts, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-angular">
+                            <!--<div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-csharp">
+                            <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -4574,28 +4574,28 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class partialUpdateFaculitiesExample
+    public class partialUpdateFacultiesExample
     {
         public void main()
         {
 
 
-            var apiInstance = new FaculitiesApi();
-            var id = id_example;  // String | A unique integer value identifying this faculities.
-            var body = new FaculitiesRetrieve(); // FaculitiesRetrieve |  (optional) 
-            var faculity = faculity_example;  // String | faculity (optional) 
+            var apiInstance = new FacultiesApi();
+            var id = id_example;  // String | A unique integer value identifying this faculties.
+            var body = new FacultiesRetrieve(); // FacultiesRetrieve |  (optional) 
+            var faculty = faculty_example;  // String | faculty (optional) 
             var school = school_example;  // String | school (optional) 
             var city = city_example;  // String | city (optional) 
             var course = course_example;  // String | course (optional) 
 
             try
             {
-                FaculitiesRetrieve result = apiInstance.partialUpdateFaculities(id, body, faculity, school, city, course);
+                FacultiesRetrieve result = apiInstance.partialUpdateFaculties(id, body, faculty, school, city, course);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaculitiesApi.partialUpdateFaculities: " + e.Message );
+                Debug.Print("Exception when calling FacultiesApi.partialUpdateFaculties: " + e.Message );
             }
         }
     }
@@ -4603,52 +4603,52 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-php">
+                            <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$api_instance = new Swagger\Client\ApiFaculitiesApi();
-$id = id_example; // String | A unique integer value identifying this faculities.
-$body = ; // FaculitiesRetrieve | 
-$faculity = faculity_example; // String | faculity
+$api_instance = new Swagger\Client\ApiFacultiesApi();
+$id = id_example; // String | A unique integer value identifying this faculties.
+$body = ; // FacultiesRetrieve | 
+$faculty = faculty_example; // String | faculty
 $school = school_example; // String | school
 $city = city_example; // String | city
 $course = course_example; // String | course
 
 try {
-    $result = $api_instance->partialUpdateFaculities($id, $body, $faculity, $school, $city, $course);
+    $result = $api_instance->partialUpdateFaculties($id, $body, $faculty, $school, $city, $course);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaculitiesApi->partialUpdateFaculities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FacultiesApi->partialUpdateFaculties: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-perl">
+                            <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::FaculitiesApi;
+use WWW::SwaggerClient::FacultiesApi;
 
 
-my $api_instance = WWW::SwaggerClient::FaculitiesApi->new();
-my $id = id_example; # String | A unique integer value identifying this faculities.
-my $body = WWW::SwaggerClient::Object::FaculitiesRetrieve->new(); # FaculitiesRetrieve | 
-my $faculity = faculity_example; # String | faculity
+my $api_instance = WWW::SwaggerClient::FacultiesApi->new();
+my $id = id_example; # String | A unique integer value identifying this faculties.
+my $body = WWW::SwaggerClient::Object::FacultiesRetrieve->new(); # FacultiesRetrieve | 
+my $faculty = faculty_example; # String | faculty
 my $school = school_example; # String | school
 my $city = city_example; # String | city
 my $course = course_example; # String | course
 
 eval { 
-    my $result = $api_instance->partialUpdateFaculities(id => $id, body => $body, faculity => $faculity, school => $school, city => $city, course => $course);
+    my $result = $api_instance->partialUpdateFaculties(id => $id, body => $body, faculty => $faculty, school => $school, city => $city, course => $course);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling FaculitiesApi->partialUpdateFaculities: $@\n";
+    warn "Exception when calling FacultiesApi->partialUpdateFaculties: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-partialUpdateFaculities-0-python">
+                            <div class="tab-pane" id="examples-Faculties-partialUpdateFaculties-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -4657,19 +4657,19 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.FaculitiesApi()
-id = id_example # String | A unique integer value identifying this faculities.
-body =  # FaculitiesRetrieve |  (optional)
-faculity = faculity_example # String | faculity (optional)
+api_instance = swagger_client.FacultiesApi()
+id = id_example # String | A unique integer value identifying this faculties.
+body =  # FacultiesRetrieve |  (optional)
+faculty = faculty_example # String | faculty (optional)
 school = school_example # String | school (optional)
 city = city_example # String | city (optional)
 course = course_example # String | course (optional)
 
 try: 
-    api_response = api_instance.partial_update_faculities(id, body=body, faculity=faculity, school=school, city=city, course=course)
+    api_response = api_instance.partial_update_faculties(id, body=body, faculty=faculty, school=school, city=city, course=course)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling FaculitiesApi->partialUpdateFaculities: %s\n" % e)</code></pre>
+    print("Exception when calling FacultiesApi->partialUpdateFaculties: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -4685,7 +4685,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_id">
+                                      <div id="d2e199_partialUpdateFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4693,7 +4693,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          A unique integer value identifying this faculities.
+                                                          A unique integer value identifying this faculties.
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -4722,17 +4722,17 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     },
     "application/x-www-form-urlencoded" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     },
     "multipart/form-data" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     }
   }
@@ -4749,12 +4749,12 @@ except ApiException as e:
                                   }
                                 
                                   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_partialUpdateFaculities_body');
+                                  var result = $('#d2e199_partialUpdateFaculties_body');
                                   result.empty();
                                   result.append(view.render());
                                 });
                                 </script>
-                                <div id="d2e199_partialUpdateFaculities_body"></div>
+                                <div id="d2e199_partialUpdateFaculties_body"></div>
                                 </td>
                                 </tr>
                             </table>
@@ -4769,7 +4769,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_id">
+                                      <div id="d2e199_partialUpdateFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4785,7 +4785,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_name">
+                                      <div id="d2e199_partialUpdateFaculties_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4801,7 +4801,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_description">
+                                      <div id="d2e199_partialUpdateFaculties_description">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4817,7 +4817,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_school">
+                                      <div id="d2e199_partialUpdateFaculties_school">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4833,7 +4833,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_city">
+                                      <div id="d2e199_partialUpdateFaculties_city">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4849,7 +4849,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_hyperlink">
+                                      <div id="d2e199_partialUpdateFaculties_hyperlink">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4868,7 +4868,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_images">
+                                      <div id="d2e199_partialUpdateFaculties_images">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4884,7 +4884,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_courses">
+                                      <div id="d2e199_partialUpdateFaculties_courses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4900,7 +4900,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_addCourses">
+                                      <div id="d2e199_partialUpdateFaculties_addCourses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4916,7 +4916,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_addSchool">
+                                      <div id="d2e199_partialUpdateFaculties_addSchool">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4932,7 +4932,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_addCity">
+                                      <div id="d2e199_partialUpdateFaculties_addCity">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4948,7 +4948,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_uploadedImages">
+                                      <div id="d2e199_partialUpdateFaculties_uploadedImages">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4967,7 +4967,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_comments">
+                                      <div id="d2e199_partialUpdateFaculties_comments">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4983,7 +4983,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_modificatedBy">
+                                      <div id="d2e199_partialUpdateFaculties_modificatedBy">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -4999,7 +4999,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_modificationDate">
+                                      <div id="d2e199_partialUpdateFaculties_modificationDate">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5018,7 +5018,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_id">
+                                      <div id="d2e199_partialUpdateFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5034,7 +5034,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_name">
+                                      <div id="d2e199_partialUpdateFaculties_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5050,7 +5050,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_description">
+                                      <div id="d2e199_partialUpdateFaculties_description">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5066,7 +5066,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_school">
+                                      <div id="d2e199_partialUpdateFaculties_school">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5082,7 +5082,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_city">
+                                      <div id="d2e199_partialUpdateFaculties_city">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5098,7 +5098,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_hyperlink">
+                                      <div id="d2e199_partialUpdateFaculties_hyperlink">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5117,7 +5117,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_images">
+                                      <div id="d2e199_partialUpdateFaculties_images">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5133,7 +5133,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_courses">
+                                      <div id="d2e199_partialUpdateFaculties_courses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5149,7 +5149,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_addCourses">
+                                      <div id="d2e199_partialUpdateFaculties_addCourses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5165,7 +5165,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_addSchool">
+                                      <div id="d2e199_partialUpdateFaculties_addSchool">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5181,7 +5181,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_addCity">
+                                      <div id="d2e199_partialUpdateFaculties_addCity">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5197,7 +5197,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_uploadedImages">
+                                      <div id="d2e199_partialUpdateFaculties_uploadedImages">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5216,7 +5216,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_comments">
+                                      <div id="d2e199_partialUpdateFaculties_comments">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5232,7 +5232,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_modificatedBy">
+                                      <div id="d2e199_partialUpdateFaculties_modificatedBy">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5248,7 +5248,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_partialUpdateFaculities_modificationDate">
+                                      <div id="d2e199_partialUpdateFaculties_modificationDate">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5271,11 +5271,11 @@ except ApiException as e:
                                 <th width="150px">Name</th>
                                 <th>Description</th>
                               </tr>
-                                <tr><td style="width:150px;">faculity</td>
+                                <tr><td style="width:150px;">faculty</td>
                                 <td>
                                 
                                 
-                                    <div id="d2e199_partialUpdateFaculities_faculity">
+                                    <div id="d2e199_partialUpdateFaculties_faculty">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5283,7 +5283,7 @@ except ApiException as e:
                                                 </span>
                                 
                                                     <div class="inner description">
-                                                        faculity
+                                                        faculty
                                                     </div>
                                             </div>
                                         </div>
@@ -5294,7 +5294,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_partialUpdateFaculities_school">
+                                    <div id="d2e199_partialUpdateFaculties_school">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5313,7 +5313,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_partialUpdateFaculities_city">
+                                    <div id="d2e199_partialUpdateFaculties_city">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5332,7 +5332,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_partialUpdateFaculities_course">
+                                    <div id="d2e199_partialUpdateFaculties_course">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5354,14 +5354,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-partialUpdateFaculities-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-partialUpdateFaculties-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-partialUpdateFaculities-200-schema">
-                                  <div id='responses-partialUpdateFaculities-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-partialUpdateFaculties-200-schema">
+                                  <div id='responses-partialUpdateFaculties-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -5369,7 +5369,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     }
   }
@@ -5387,14 +5387,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-partialUpdateFaculities-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-partialUpdateFaculities-200-schema-200');
+                                        $('#responses-partialUpdateFaculties-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-partialUpdateFaculties-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-partialUpdateFaculities-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-partialUpdateFaculties-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -5409,10 +5409,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-Faculities-retrieveFaculities">
-                      <article id="api-Faculities-retrieveFaculities-0" data-group="User" data-name="retrieveFaculities" data-version="0">
+                    <div id="api-Faculties-retrieveFaculties">
+                      <article id="api-Faculties-retrieveFaculties-0" data-group="User" data-name="retrieveFaculties" data-version="0">
                         <div class="pull-left">
-                          <h1>retrieveFaculities</h1>
+                          <h1>retrieveFaculties</h1>
                           <p></p>
                         </div>
                         <div class="pull-right"></div>
@@ -5421,101 +5421,101 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/faculities/{id}/</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/faculties/{id}/</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Faculities-retrieveFaculities-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-retrieveFaculities-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-retrieveFaculities-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Faculities-retrieveFaculities-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Faculties-retrieveFaculties-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-retrieveFaculties-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-retrieveFaculties-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faculties-retrieveFaculties-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Faculities-retrieveFaculities-0-curl">
+                          <div class="tab-pane active" id="examples-Faculties-retrieveFaculties-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://djalowiecki.toadres.pl/studies-search/api/api/faculities/{id}/?faculity=&school=&city=&course="</code></pre>
+"https://djalowiecki.toadres.pl/studies-search/api/api/faculties/{id}/?faculty=&school=&city=&course="</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-java">
+                          <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.FaculitiesApi;
+import io.swagger.client.api.FacultiesApi;
 
 import java.io.File;
 import java.util.*;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
         
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        String id = id_example; // String | A unique integer value identifying this faculities.
-        String faculity = faculity_example; // String | faculity
+        FacultiesApi apiInstance = new FacultiesApi();
+        String id = id_example; // String | A unique integer value identifying this faculties.
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            FaculitiesRetrieve result = apiInstance.retrieveFaculities(id, faculity, school, city, course);
+            FacultiesRetrieve result = apiInstance.retrieveFaculties(id, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#retrieveFaculities");
+            System.err.println("Exception when calling FacultiesApi#retrieveFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaculitiesApi;
+                          <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FacultiesApi;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        String id = id_example; // String | A unique integer value identifying this faculities.
-        String faculity = faculity_example; // String | faculity
+        FacultiesApi apiInstance = new FacultiesApi();
+        String id = id_example; // String | A unique integer value identifying this faculties.
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            FaculitiesRetrieve result = apiInstance.retrieveFaculities(id, faculity, school, city, course);
+            FacultiesRetrieve result = apiInstance.retrieveFaculties(id, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#retrieveFaculities");
+            System.err.println("Exception when calling FacultiesApi#retrieveFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-groovy">
+  <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *id = id_example; // A unique integer value identifying this faculities.
-String *faculity = faculity_example; // faculity (optional)
+                            <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *id = id_example; // A unique integer value identifying this faculties.
+String *faculty = faculty_example; // faculty (optional)
 String *school = school_example; // school (optional)
 String *city = city_example; // city (optional)
 String *course = course_example; // course (optional)
 
-FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
+FacultiesApi *apiInstance = [[FacultiesApi alloc] init];
 
-[apiInstance retrieveFaculitiesWith:id
-    faculity:faculity
+[apiInstance retrieveFacultiesWith:id
+    faculty:faculty
     school:school
     city:city
     course:course
-              completionHandler: ^(FaculitiesRetrieve output, NSError* error) {
+              completionHandler: ^(FacultiesRetrieve output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -5526,13 +5526,13 @@ FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-javascript">
+                            <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var StudiesSearchApi = require('studies_search_api');
 
-var api = new StudiesSearchApi.FaculitiesApi()
-var id = id_example; // {{String}} A unique integer value identifying this faculities.
+var api = new StudiesSearchApi.FacultiesApi()
+var id = id_example; // {{String}} A unique integer value identifying this faculties.
 var opts = { 
-  'faculity': faculity_example, // {{String}} faculity
+  'faculty': faculty_example, // {{String}} faculty
   'school': school_example, // {{String}} school
   'city': city_example, // {{String}} city
   'course': course_example // {{String}} course
@@ -5544,14 +5544,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.retrieveFaculities(id, opts, callback);
+api.retrieveFaculties(id, opts, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-angular">
+                            <!--<div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-csharp">
+                            <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -5560,26 +5560,26 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class retrieveFaculitiesExample
+    public class retrieveFacultiesExample
     {
         public void main()
         {
 
-            var apiInstance = new FaculitiesApi();
-            var id = id_example;  // String | A unique integer value identifying this faculities.
-            var faculity = faculity_example;  // String | faculity (optional) 
+            var apiInstance = new FacultiesApi();
+            var id = id_example;  // String | A unique integer value identifying this faculties.
+            var faculty = faculty_example;  // String | faculty (optional) 
             var school = school_example;  // String | school (optional) 
             var city = city_example;  // String | city (optional) 
             var course = course_example;  // String | course (optional) 
 
             try
             {
-                FaculitiesRetrieve result = apiInstance.retrieveFaculities(id, faculity, school, city, course);
+                FacultiesRetrieve result = apiInstance.retrieveFaculties(id, faculty, school, city, course);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaculitiesApi.retrieveFaculities: " + e.Message );
+                Debug.Print("Exception when calling FacultiesApi.retrieveFaculties: " + e.Message );
             }
         }
     }
@@ -5587,48 +5587,48 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-php">
+                            <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\ApiFaculitiesApi();
-$id = id_example; // String | A unique integer value identifying this faculities.
-$faculity = faculity_example; // String | faculity
+$api_instance = new Swagger\Client\ApiFacultiesApi();
+$id = id_example; // String | A unique integer value identifying this faculties.
+$faculty = faculty_example; // String | faculty
 $school = school_example; // String | school
 $city = city_example; // String | city
 $course = course_example; // String | course
 
 try {
-    $result = $api_instance->retrieveFaculities($id, $faculity, $school, $city, $course);
+    $result = $api_instance->retrieveFaculties($id, $faculty, $school, $city, $course);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaculitiesApi->retrieveFaculities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FacultiesApi->retrieveFaculties: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-perl">
+                            <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::FaculitiesApi;
+use WWW::SwaggerClient::FacultiesApi;
 
-my $api_instance = WWW::SwaggerClient::FaculitiesApi->new();
-my $id = id_example; # String | A unique integer value identifying this faculities.
-my $faculity = faculity_example; # String | faculity
+my $api_instance = WWW::SwaggerClient::FacultiesApi->new();
+my $id = id_example; # String | A unique integer value identifying this faculties.
+my $faculty = faculty_example; # String | faculty
 my $school = school_example; # String | school
 my $city = city_example; # String | city
 my $course = course_example; # String | course
 
 eval { 
-    my $result = $api_instance->retrieveFaculities(id => $id, faculity => $faculity, school => $school, city => $city, course => $course);
+    my $result = $api_instance->retrieveFaculties(id => $id, faculty => $faculty, school => $school, city => $city, course => $course);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling FaculitiesApi->retrieveFaculities: $@\n";
+    warn "Exception when calling FacultiesApi->retrieveFaculties: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-retrieveFaculities-0-python">
+                            <div class="tab-pane" id="examples-Faculties-retrieveFaculties-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -5636,18 +5636,18 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.FaculitiesApi()
-id = id_example # String | A unique integer value identifying this faculities.
-faculity = faculity_example # String | faculity (optional)
+api_instance = swagger_client.FacultiesApi()
+id = id_example # String | A unique integer value identifying this faculties.
+faculty = faculty_example # String | faculty (optional)
 school = school_example # String | school (optional)
 city = city_example # String | city (optional)
 course = course_example # String | course (optional)
 
 try: 
-    api_response = api_instance.retrieve_faculities(id, faculity=faculity, school=school, city=city, course=course)
+    api_response = api_instance.retrieve_faculties(id, faculty=faculty, school=school, city=city, course=course)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling FaculitiesApi->retrieveFaculities: %s\n" % e)</code></pre>
+    print("Exception when calling FacultiesApi->retrieveFaculties: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -5663,7 +5663,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_retrieveFaculities_id">
+                                      <div id="d2e199_retrieveFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5671,7 +5671,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          A unique integer value identifying this faculities.
+                                                          A unique integer value identifying this faculties.
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -5692,11 +5692,11 @@ except ApiException as e:
                                 <th width="150px">Name</th>
                                 <th>Description</th>
                               </tr>
-                                <tr><td style="width:150px;">faculity</td>
+                                <tr><td style="width:150px;">faculty</td>
                                 <td>
                                 
                                 
-                                    <div id="d2e199_retrieveFaculities_faculity">
+                                    <div id="d2e199_retrieveFaculties_faculty">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5704,7 +5704,7 @@ except ApiException as e:
                                                 </span>
                                 
                                                     <div class="inner description">
-                                                        faculity
+                                                        faculty
                                                     </div>
                                             </div>
                                         </div>
@@ -5715,7 +5715,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_retrieveFaculities_school">
+                                    <div id="d2e199_retrieveFaculties_school">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5734,7 +5734,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_retrieveFaculities_city">
+                                    <div id="d2e199_retrieveFaculties_city">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5753,7 +5753,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_retrieveFaculities_course">
+                                    <div id="d2e199_retrieveFaculties_course">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -5775,14 +5775,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-retrieveFaculities-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-retrieveFaculties-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-retrieveFaculities-200-schema">
-                                  <div id='responses-retrieveFaculities-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-retrieveFaculties-200-schema">
+                                  <div id='responses-retrieveFaculties-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -5790,7 +5790,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     }
   }
@@ -5808,24 +5808,24 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-retrieveFaculities-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-retrieveFaculities-200-schema-200');
+                                        $('#responses-retrieveFaculties-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-retrieveFaculties-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-retrieveFaculities-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-retrieveFaculties-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
                         </article>
                       </div>
                       <hr>
-                    <div id="api-Faculities-updateFaculities">
-                      <article id="api-Faculities-updateFaculities-0" data-group="User" data-name="updateFaculities" data-version="0">
+                    <div id="api-Faculties-updateFaculties">
+                      <article id="api-Faculties-updateFaculties-0" data-group="User" data-name="updateFaculties" data-version="0">
                         <div class="pull-left">
-                          <h1>updateFaculities</h1>
+                          <h1>updateFaculties</h1>
                           <p></p>
                         </div>
                         <div class="pull-right"></div>
@@ -5834,110 +5834,110 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="put"><code><span class="pln">/api/faculities/{id}/</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="put"><code><span class="pln">/api/faculties/{id}/</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Faculities-updateFaculities-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-updateFaculities-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Faculities-updateFaculities-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Faculities-updateFaculities-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Faculties-updateFaculties-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-updateFaculties-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faculties-updateFaculties-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faculties-updateFaculties-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Faculities-updateFaculities-0-curl">
+                          <div class="tab-pane active" id="examples-Faculties-updateFaculties-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT\
  -H "Authorization: Bearer [[accessToken]]"\
 -H "Accept: application/json"\
 -H "Content-Type: application/json,application/x-www-form-urlencoded,multipart/form-data"\
-"https://djalowiecki.toadres.pl/studies-search/api/api/faculities/{id}/?faculity=&school=&city=&course="</code></pre>
+"https://djalowiecki.toadres.pl/studies-search/api/api/faculties/{id}/?faculty=&school=&city=&course="</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Faculities-updateFaculities-0-java">
+                          <div class="tab-pane" id="examples-Faculties-updateFaculties-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.FaculitiesApi;
+import io.swagger.client.api.FacultiesApi;
 
 import java.io.File;
 import java.util.*;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        String id = id_example; // String | A unique integer value identifying this faculities.
-        FaculitiesRetrieve body = ; // FaculitiesRetrieve | 
-        String faculity = faculity_example; // String | faculity
+        FacultiesApi apiInstance = new FacultiesApi();
+        String id = id_example; // String | A unique integer value identifying this faculties.
+        FacultiesRetrieve body = ; // FacultiesRetrieve | 
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            FaculitiesRetrieve result = apiInstance.updateFaculities(id, body, faculity, school, city, course);
+            FacultiesRetrieve result = apiInstance.updateFaculties(id, body, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#updateFaculities");
+            System.err.println("Exception when calling FacultiesApi#updateFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Faculities-updateFaculities-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaculitiesApi;
+                          <div class="tab-pane" id="examples-Faculties-updateFaculties-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FacultiesApi;
 
-public class FaculitiesApiExample {
+public class FacultiesApiExample {
 
     public static void main(String[] args) {
-        FaculitiesApi apiInstance = new FaculitiesApi();
-        String id = id_example; // String | A unique integer value identifying this faculities.
-        FaculitiesRetrieve body = ; // FaculitiesRetrieve | 
-        String faculity = faculity_example; // String | faculity
+        FacultiesApi apiInstance = new FacultiesApi();
+        String id = id_example; // String | A unique integer value identifying this faculties.
+        FacultiesRetrieve body = ; // FacultiesRetrieve | 
+        String faculty = faculty_example; // String | faculty
         String school = school_example; // String | school
         String city = city_example; // String | city
         String course = course_example; // String | course
         try {
-            FaculitiesRetrieve result = apiInstance.updateFaculities(id, body, faculity, school, city, course);
+            FacultiesRetrieve result = apiInstance.updateFaculties(id, body, faculty, school, city, course);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FaculitiesApi#updateFaculities");
+            System.err.println("Exception when calling FacultiesApi#updateFaculties");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Faculities-updateFaculities-0-groovy">
+  <div class="tab-pane" id="examples-Faculties-updateFaculties-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Faculities-updateFaculities-0-objc">
+                            <div class="tab-pane" id="examples-Faculties-updateFaculties-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
-String *id = id_example; // A unique integer value identifying this faculities.
-FaculitiesRetrieve *body = ; //  (optional)
-String *faculity = faculity_example; // faculity (optional)
+String *id = id_example; // A unique integer value identifying this faculties.
+FacultiesRetrieve *body = ; //  (optional)
+String *faculty = faculty_example; // faculty (optional)
 String *school = school_example; // school (optional)
 String *city = city_example; // city (optional)
 String *course = course_example; // course (optional)
 
-FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
+FacultiesApi *apiInstance = [[FacultiesApi alloc] init];
 
-[apiInstance updateFaculitiesWith:id
+[apiInstance updateFacultiesWith:id
     body:body
-    faculity:faculity
+    faculty:faculty
     school:school
     city:city
     course:course
-              completionHandler: ^(FaculitiesRetrieve output, NSError* error) {
+              completionHandler: ^(FacultiesRetrieve output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -5948,16 +5948,16 @@ FaculitiesApi *apiInstance = [[FaculitiesApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-updateFaculities-0-javascript">
+                            <div class="tab-pane" id="examples-Faculties-updateFaculties-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var StudiesSearchApi = require('studies_search_api');
 var defaultClient = StudiesSearchApi.ApiClient.instance;
 
 
-var api = new StudiesSearchApi.FaculitiesApi()
-var id = id_example; // {{String}} A unique integer value identifying this faculities.
+var api = new StudiesSearchApi.FacultiesApi()
+var id = id_example; // {{String}} A unique integer value identifying this faculties.
 var opts = { 
-  'body':  // {{FaculitiesRetrieve}} 
-  'faculity': faculity_example // {{String}} faculity
+  'body':  // {{FacultiesRetrieve}} 
+  'faculty': faculty_example // {{String}} faculty
   'school': school_example // {{String}} school
   'city': city_example // {{String}} city
   'course': course_example // {{String}} course
@@ -5969,14 +5969,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.updateFaculities(id, opts, callback);
+api.updateFaculties(id, opts, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Faculities-updateFaculities-0-angular">
+                            <!--<div class="tab-pane" id="examples-Faculties-updateFaculties-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Faculities-updateFaculities-0-csharp">
+                            <div class="tab-pane" id="examples-Faculties-updateFaculties-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -5985,28 +5985,28 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class updateFaculitiesExample
+    public class updateFacultiesExample
     {
         public void main()
         {
 
 
-            var apiInstance = new FaculitiesApi();
-            var id = id_example;  // String | A unique integer value identifying this faculities.
-            var body = new FaculitiesRetrieve(); // FaculitiesRetrieve |  (optional) 
-            var faculity = faculity_example;  // String | faculity (optional) 
+            var apiInstance = new FacultiesApi();
+            var id = id_example;  // String | A unique integer value identifying this faculties.
+            var body = new FacultiesRetrieve(); // FacultiesRetrieve |  (optional) 
+            var faculty = faculty_example;  // String | faculty (optional) 
             var school = school_example;  // String | school (optional) 
             var city = city_example;  // String | city (optional) 
             var course = course_example;  // String | course (optional) 
 
             try
             {
-                FaculitiesRetrieve result = apiInstance.updateFaculities(id, body, faculity, school, city, course);
+                FacultiesRetrieve result = apiInstance.updateFaculties(id, body, faculty, school, city, course);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FaculitiesApi.updateFaculities: " + e.Message );
+                Debug.Print("Exception when calling FacultiesApi.updateFaculties: " + e.Message );
             }
         }
     }
@@ -6014,52 +6014,52 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-updateFaculities-0-php">
+                            <div class="tab-pane" id="examples-Faculties-updateFaculties-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$api_instance = new Swagger\Client\ApiFaculitiesApi();
-$id = id_example; // String | A unique integer value identifying this faculities.
-$body = ; // FaculitiesRetrieve | 
-$faculity = faculity_example; // String | faculity
+$api_instance = new Swagger\Client\ApiFacultiesApi();
+$id = id_example; // String | A unique integer value identifying this faculties.
+$body = ; // FacultiesRetrieve | 
+$faculty = faculty_example; // String | faculty
 $school = school_example; // String | school
 $city = city_example; // String | city
 $course = course_example; // String | course
 
 try {
-    $result = $api_instance->updateFaculities($id, $body, $faculity, $school, $city, $course);
+    $result = $api_instance->updateFaculties($id, $body, $faculty, $school, $city, $course);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaculitiesApi->updateFaculities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FacultiesApi->updateFaculties: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-updateFaculities-0-perl">
+                            <div class="tab-pane" id="examples-Faculties-updateFaculties-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::FaculitiesApi;
+use WWW::SwaggerClient::FacultiesApi;
 
 
-my $api_instance = WWW::SwaggerClient::FaculitiesApi->new();
-my $id = id_example; # String | A unique integer value identifying this faculities.
-my $body = WWW::SwaggerClient::Object::FaculitiesRetrieve->new(); # FaculitiesRetrieve | 
-my $faculity = faculity_example; # String | faculity
+my $api_instance = WWW::SwaggerClient::FacultiesApi->new();
+my $id = id_example; # String | A unique integer value identifying this faculties.
+my $body = WWW::SwaggerClient::Object::FacultiesRetrieve->new(); # FacultiesRetrieve | 
+my $faculty = faculty_example; # String | faculty
 my $school = school_example; # String | school
 my $city = city_example; # String | city
 my $course = course_example; # String | course
 
 eval { 
-    my $result = $api_instance->updateFaculities(id => $id, body => $body, faculity => $faculity, school => $school, city => $city, course => $course);
+    my $result = $api_instance->updateFaculties(id => $id, body => $body, faculty => $faculty, school => $school, city => $city, course => $course);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling FaculitiesApi->updateFaculities: $@\n";
+    warn "Exception when calling FacultiesApi->updateFaculties: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Faculities-updateFaculities-0-python">
+                            <div class="tab-pane" id="examples-Faculties-updateFaculties-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -6068,19 +6068,19 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = swagger_client.FaculitiesApi()
-id = id_example # String | A unique integer value identifying this faculities.
-body =  # FaculitiesRetrieve |  (optional)
-faculity = faculity_example # String | faculity (optional)
+api_instance = swagger_client.FacultiesApi()
+id = id_example # String | A unique integer value identifying this faculties.
+body =  # FacultiesRetrieve |  (optional)
+faculty = faculty_example # String | faculty (optional)
 school = school_example # String | school (optional)
 city = city_example # String | city (optional)
 course = course_example # String | course (optional)
 
 try: 
-    api_response = api_instance.update_faculities(id, body=body, faculity=faculity, school=school, city=city, course=course)
+    api_response = api_instance.update_faculties(id, body=body, faculty=faculty, school=school, city=city, course=course)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling FaculitiesApi->updateFaculities: %s\n" % e)</code></pre>
+    print("Exception when calling FacultiesApi->updateFaculties: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -6096,7 +6096,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_id">
+                                      <div id="d2e199_updateFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6104,7 +6104,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          A unique integer value identifying this faculities.
+                                                          A unique integer value identifying this faculties.
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -6133,17 +6133,17 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     },
     "application/x-www-form-urlencoded" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     },
     "multipart/form-data" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     }
   }
@@ -6160,12 +6160,12 @@ except ApiException as e:
                                   }
                                 
                                   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_updateFaculities_body');
+                                  var result = $('#d2e199_updateFaculties_body');
                                   result.empty();
                                   result.append(view.render());
                                 });
                                 </script>
-                                <div id="d2e199_updateFaculities_body"></div>
+                                <div id="d2e199_updateFaculties_body"></div>
                                 </td>
                                 </tr>
                             </table>
@@ -6180,7 +6180,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_id">
+                                      <div id="d2e199_updateFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6196,7 +6196,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_name">
+                                      <div id="d2e199_updateFaculties_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6212,7 +6212,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_description">
+                                      <div id="d2e199_updateFaculties_description">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6228,7 +6228,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_school">
+                                      <div id="d2e199_updateFaculties_school">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6244,7 +6244,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_city">
+                                      <div id="d2e199_updateFaculties_city">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6260,7 +6260,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_hyperlink">
+                                      <div id="d2e199_updateFaculties_hyperlink">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6279,7 +6279,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_images">
+                                      <div id="d2e199_updateFaculties_images">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6295,7 +6295,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_courses">
+                                      <div id="d2e199_updateFaculties_courses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6311,7 +6311,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_addCourses">
+                                      <div id="d2e199_updateFaculties_addCourses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6327,7 +6327,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_addSchool">
+                                      <div id="d2e199_updateFaculties_addSchool">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6343,7 +6343,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_addCity">
+                                      <div id="d2e199_updateFaculties_addCity">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6359,7 +6359,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_uploadedImages">
+                                      <div id="d2e199_updateFaculties_uploadedImages">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6378,7 +6378,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_comments">
+                                      <div id="d2e199_updateFaculties_comments">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6394,7 +6394,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_modificatedBy">
+                                      <div id="d2e199_updateFaculties_modificatedBy">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6410,7 +6410,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_modificationDate">
+                                      <div id="d2e199_updateFaculties_modificationDate">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6429,7 +6429,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_id">
+                                      <div id="d2e199_updateFaculties_id">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6445,7 +6445,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_name">
+                                      <div id="d2e199_updateFaculties_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6461,7 +6461,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_description">
+                                      <div id="d2e199_updateFaculties_description">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6477,7 +6477,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_school">
+                                      <div id="d2e199_updateFaculties_school">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6493,7 +6493,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_city">
+                                      <div id="d2e199_updateFaculties_city">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6509,7 +6509,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_hyperlink">
+                                      <div id="d2e199_updateFaculties_hyperlink">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6528,7 +6528,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_images">
+                                      <div id="d2e199_updateFaculties_images">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6544,7 +6544,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_courses">
+                                      <div id="d2e199_updateFaculties_courses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6560,7 +6560,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_addCourses">
+                                      <div id="d2e199_updateFaculties_addCourses">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6576,7 +6576,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_addSchool">
+                                      <div id="d2e199_updateFaculties_addSchool">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6592,7 +6592,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_addCity">
+                                      <div id="d2e199_updateFaculties_addCity">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6608,7 +6608,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_uploadedImages">
+                                      <div id="d2e199_updateFaculties_uploadedImages">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6627,7 +6627,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_comments">
+                                      <div id="d2e199_updateFaculties_comments">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6643,7 +6643,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_modificatedBy">
+                                      <div id="d2e199_updateFaculties_modificatedBy">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6659,7 +6659,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_updateFaculities_modificationDate">
+                                      <div id="d2e199_updateFaculties_modificationDate">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -6682,11 +6682,11 @@ except ApiException as e:
                                 <th width="150px">Name</th>
                                 <th>Description</th>
                               </tr>
-                                <tr><td style="width:150px;">faculity</td>
+                                <tr><td style="width:150px;">faculty</td>
                                 <td>
                                 
                                 
-                                    <div id="d2e199_updateFaculities_faculity">
+                                    <div id="d2e199_updateFaculties_faculty">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -6694,7 +6694,7 @@ except ApiException as e:
                                                 </span>
                                 
                                                     <div class="inner description">
-                                                        faculity
+                                                        faculty
                                                     </div>
                                             </div>
                                         </div>
@@ -6705,7 +6705,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_updateFaculities_school">
+                                    <div id="d2e199_updateFaculties_school">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -6724,7 +6724,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_updateFaculities_city">
+                                    <div id="d2e199_updateFaculties_city">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -6743,7 +6743,7 @@ except ApiException as e:
                                 <td>
                                 
                                 
-                                    <div id="d2e199_updateFaculities_course">
+                                    <div id="d2e199_updateFaculties_course">
                                         <div class="json-schema-view">
                                             <div class="primitive">
                                                 <span class="type">
@@ -6765,14 +6765,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-updateFaculities-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-updateFaculties-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-updateFaculities-200-schema">
-                                  <div id='responses-updateFaculities-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-updateFaculties-200-schema">
+                                  <div id='responses-updateFaculties-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -6780,7 +6780,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/FaculitiesRetrieve"
+        "$ref" : "#/components/schemas/FacultiesRetrieve"
       }
     }
   }
@@ -6798,14 +6798,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-updateFaculities-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-updateFaculities-200-schema-200');
+                                        $('#responses-updateFaculties-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-updateFaculties-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-updateFaculities-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-updateFaculties-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 

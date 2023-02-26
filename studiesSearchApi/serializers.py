@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from studiesSearchApi.models import User, Faculities, FaculitiesImages, Comments, Cities, Membership, Schools, Cities, Comments, Courses
+from studiesSearchApi.models import User, Faculties, FacultiesImages, Comments, Cities, Membership, Schools, Cities, Comments, Courses
 from djoser.serializers import UserSerializer, UserCreateSerializer, TokenSerializer
 from djoser.conf import settings
 from django.conf import settings as djangoSettings
@@ -9,7 +9,7 @@ from django.core.validators import RegexValidator
 
 
 
-class FaculitiesImagesField(serializers.RelatedField):
+class FacultiesImagesField(serializers.RelatedField):
     def to_representation(self, value):
         url = value.image.url
         request = self.context.get('request', None)
@@ -101,22 +101,22 @@ class ExtendsUserCreatePasswordRetypeSerializer(ExtendsUserCreateSerializer):
         else:
             self.fail("password_mismatch")
 
-class FaculitiesListSerializer(serializers.ModelSerializer):
+class FacultiesListSerializer(serializers.ModelSerializer):
     school = serializers.SlugRelatedField(queryset=Schools.objects.all(), slug_field='name')
     city = serializers.SlugRelatedField(queryset=Cities.objects.all(), slug_field='name')
-    first_image = FaculitiesImagesField(read_only=True)
+    first_image = FacultiesImagesField(read_only=True)
     courses = serializers.SlugRelatedField(many=True, queryset=Courses.objects.all(), slug_field='name')
 
     class Meta:
-        model = Faculities
+        model = Faculties
         fields = ['id', 'name', 'description_preview', 'school', 'city', 'first_image', 'courses']
 
-class FaculitiesRetrieveSerializer(serializers.ModelSerializer):
+class FacultiesRetrieveSerializer(serializers.ModelSerializer):
     school = serializers.SlugRelatedField(read_only=True, slug_field='name')
     add_school = serializers.CharField(write_only=True, required=True, max_length=Schools._meta.get_field('name').max_length)
     city = serializers.SlugRelatedField(read_only=True, slug_field='name')
     add_city = serializers.CharField(write_only=True, required=True, max_length=Cities._meta.get_field('name').max_length, validators=[RegexValidator(r"^[a-zA-Z ]*$", "City name should contain only letters and spaces.")])
-    images = FaculitiesImagesField(many=True, read_only=True)
+    images = FacultiesImagesField(many=True, read_only=True)
 
     def image_validator(image):
         MEGABYTE_LIMIT = 2
@@ -153,12 +153,12 @@ class FaculitiesRetrieveSerializer(serializers.ModelSerializer):
             'school': school,
             'city': city
         }        
-        instance = Faculities.objects.create(**validated_data)
+        instance = Faculties.objects.create(**validated_data)
         instance.courses.set(courses)
 
         try:
             for uploaded_item in uploaded_data:
-                FaculitiesImages.objects.create(faculity=instance, image=uploaded_item)
+                FacultiesImages.objects.create(faculty=instance, image=uploaded_item)
         except:
             pass
 
@@ -182,7 +182,7 @@ class FaculitiesRetrieveSerializer(serializers.ModelSerializer):
         return instance
 
     class Meta:
-        model = Faculities
+        model = Faculties
         fields = ['id', 'name', 'description', 'school', 'city', 'hyperlink', 'images', 'courses', 'add_courses', 'add_school', 'add_city', 'uploaded_images', 'comments', 'modificated_by', 'modification_date']
 
 class MembershipSerializer(serializers.ModelSerializer):
@@ -207,7 +207,7 @@ class CoursesSerializer(serializers.ModelSerializer):
 
 class CommentsSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(read_only=True)
-    entry = serializers.PrimaryKeyRelatedField(queryset=Faculities.objects.all())
+    entry = serializers.PrimaryKeyRelatedField(queryset=Faculties.objects.all())
 
     class Meta:
         model = Comments

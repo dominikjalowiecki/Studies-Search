@@ -1,7 +1,7 @@
-from studiesSearchApi.models import Faculities, Schools, Cities, Comments, Courses, Membership
+from studiesSearchApi.models import Faculties, Schools, Cities, Comments, Courses, Membership
 from studiesSearchApi.serializers import (
-    FaculitiesListSerializer,
-    FaculitiesRetrieveSerializer,
+    FacultiesListSerializer,
+    FacultiesRetrieveSerializer,
     SchoolsSerializer,
     MembershipSerializer,
     CitiesSerializer,
@@ -46,14 +46,14 @@ class FiltersViewSet(
             "courses": courses.data,
         })
 
-class FaculitiesViewSet(
+class FacultiesViewSet(
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
     mixins.UpdateModelMixin,
     mixins.ListModelMixin,
     viewsets.GenericViewSet
 ):
-    queryset = Faculities.objects.all()
+    queryset = Faculties.objects.all()
     filterset_class = FacuilitesFilter
     permission_classes = [IsModerator]
 
@@ -78,11 +78,11 @@ class FaculitiesViewSet(
 
     def get_serializer_class(self):
         if self.action == 'list':
-            return FaculitiesListSerializer
+            return FacultiesListSerializer
         if self.action == 'retrieve':
-            return FaculitiesRetrieveSerializer
+            return FacultiesRetrieveSerializer
 
-        return FaculitiesRetrieveSerializer
+        return FacultiesRetrieveSerializer
 
 class MembershipViewSet(
     mixins.ListModelMixin,

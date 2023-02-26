@@ -9,9 +9,9 @@ servers:
   - url: http://localhost:8000
     description: Development server
 paths:
-  /api/faculities/:
+  /api/faculties/:
     get:
-      operationId: listFaculities
+      operationId: listFaculties
       description: ''
       parameters:
         - name: page
@@ -20,10 +20,10 @@ paths:
           description: A page number within the paginated result set.
           schema:
             type: integer
-        - name: faculity
+        - name: faculty
           required: false
           in: query
-          description: faculity
+          description: faculty
           schema:
             type: string
         - name: school
@@ -67,12 +67,12 @@ paths:
                   results:
                     type: array
                     items:
-                      $ref: '#/components/schemas/FaculitiesList'
+                      $ref: '#/components/schemas/FacultiesList'
           description: ''
       tags:
-        - Faculities
+        - Faculties
     post:
-      operationId: createFaculities
+      operationId: createFaculties
       description: ''
       parameters: []
       security:
@@ -81,39 +81,39 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FaculitiesRetrieve'
+                $ref: '#/components/schemas/FacultiesRetrieve'
           description: ''
         '401':
           $ref: '#/components/responses/UnauthorizedError'
       tags:
-        - Faculities
-  /api/faculities/{id}/:
+        - Faculties
+  /api/faculties/{id}/:
     get:
-      operationId: retrieveFaculities
+      operationId: retrieveFaculties
       description: ''
       parameters:
         - name: id
           in: path
           required: true
-          description: A unique integer value identifying this faculities.
+          description: A unique integer value identifying this faculties.
           schema:
             type: string
-        - name: faculity
+        - name: faculty
           required: false
           in: query
-          description: faculity
+          description: faculty
           schema:
             type: string
         - name: school
@@ -139,24 +139,24 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FaculitiesRetrieve'
+                $ref: '#/components/schemas/FacultiesRetrieve'
           description: ''
       tags:
-        - Faculities
+        - Faculties
     put:
-      operationId: updateFaculities
+      operationId: updateFaculties
       description: ''
       parameters:
         - name: id
           in: path
           required: true
-          description: A unique integer value identifying this faculities.
+          description: A unique integer value identifying this faculties.
           schema:
             type: string
-        - name: faculity
+        - name: faculty
           required: false
           in: query
-          description: faculity
+          description: faculty
           schema:
             type: string
         - name: school
@@ -183,38 +183,38 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FaculitiesRetrieve'
+                $ref: '#/components/schemas/FacultiesRetrieve'
           description: ''
         '401':
           $ref: '#/components/responses/UnauthorizedError'
       tags:
-        - Faculities
+        - Faculties
     patch:
-      operationId: partialUpdateFaculities
+      operationId: partialUpdateFaculties
       description: ''
       parameters:
         - name: id
           in: path
           required: true
-          description: A unique integer value identifying this faculities.
+          description: A unique integer value identifying this faculties.
           schema:
             type: string
-        - name: faculity
+        - name: faculty
           required: false
           in: query
-          description: faculity
+          description: faculty
           schema:
             type: string
         - name: school
@@ -241,24 +241,24 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/FaculitiesRetrieve'
+              $ref: '#/components/schemas/FacultiesRetrieve'
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FaculitiesRetrieve'
+                $ref: '#/components/schemas/FacultiesRetrieve'
           description: ''
         '401':
           $ref: '#/components/responses/UnauthorizedError'
       tags:
-        - Faculities
+        - Faculties
   /api/filters/:
     get:
       operationId: listFilters
@@ -991,7 +991,7 @@ components:
     UnauthorizedError:
       description: Access token is missing or invalid
   schemas:
-    FaculitiesList:
+    FacultiesList:
       type: object
       properties:
         id:
@@ -1020,7 +1020,7 @@ components:
         - school
         - city
         - courses
-    FaculitiesRetrieve:
+    FacultiesRetrieve:
       type: object
       properties:
         id:

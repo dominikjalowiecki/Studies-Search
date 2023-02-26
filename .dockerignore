@@ -5,6 +5,7 @@ frontend
 *.sqlite3
 .env
 .gitignore
+.gitattributes
 .dockerignore
 Dockerfile.prod
 docker-compose.yaml
