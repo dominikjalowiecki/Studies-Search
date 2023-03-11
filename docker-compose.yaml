@@ -9,6 +9,7 @@ services:
       - ALLOWED_HOSTS=${ALLOWED_HOSTS:-127.0.0.1}
       - SECRET_KEY=${SECRET_KEY}
       - ADMINS=${ADMINS}
+      - SCRIPT_NAME=${SCRIPT_NAME:-}
       - CORS_ORIGIN_WHITELIST=${CORS_ORIGIN_WHITELIST:-127.0.0.1}
       - DATABASE_URL=postgres://user:password@database/studies-search
       - GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE=${GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE}

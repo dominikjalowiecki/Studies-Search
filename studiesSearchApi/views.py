@@ -84,6 +84,11 @@ class FacultiesViewSet(
 
         return FacultiesRetrieveSerializer
 
+    def get_queryset(self):
+        queryset = Faculties.objects.all()
+        queryset = self.get_serializer_class().setup_eager_loading(queryset) 
+        return queryset
+
 class MembershipViewSet(
     mixins.ListModelMixin,
     viewsets.GenericViewSet

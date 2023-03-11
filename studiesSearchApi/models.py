@@ -5,7 +5,6 @@ from backendApi import settings
 from django.core.validators import RegexValidator
 
 
-
 class CustomAnonymousUser(AnonymousUser):
     email = ''
     class membership:
@@ -14,14 +13,19 @@ class CustomAnonymousUser(AnonymousUser):
 django_auth_models.AnonymousUser = CustomAnonymousUser
 
 
+class Membership(models.Model):
+    name = models.CharField(max_length=30, unique=True)
+
+    def __str__(self):
+        return self.name
+
 
 class User(AbstractUser):
     email = models.EmailField(unique=True)
     membership = models.ForeignKey(
         'Membership',
-        on_delete=models.SET_NULL,
+        on_delete=models.RESTRICT,
         related_name='users',
-        blank=True,
         null=True
     )
     is_moderator = models.BooleanField(default=True)
@@ -30,13 +34,8 @@ class User(AbstractUser):
 
     @property
     def username_and_membership(self):
-        return {'username': self.username, 'membership': str(self.membership)}
+        return {'username': self.username, 'membership': str(self.membership or 'Admin')}
 
-class Membership(models.Model):
-    name = models.CharField(max_length=30, unique=True)
-
-    def __str__(self):
-        return self.name
 
 class Schools(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -96,7 +95,8 @@ class Faculties(models.Model):
 
     @property
     def first_image(self):
-        return self.images.first()
+        images = self.images.all()
+        return images[0] if images else None
     
     def smart_truncate(self, content, length=100, suffix='...'):
         if len(content) <= length:
@@ -142,7 +142,7 @@ class Comments(models.Model):
 
     @property
     def comment_details(self):
-        return {'username': self.user.username, 'membership': self.user.membership.name, 'content': self.content, 'modification_date': self.modification_date}
+        return {'username': self.user.username, 'membership': self.user.membership.name if self.user.membership != None else 'Admin', 'content': self.content, 'modification_date': self.modification_date}
     
     class Meta:
         ordering = ['-modification_date']

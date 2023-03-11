@@ -7,4 +7,4 @@ echo "Applying database migrations"
 python manage.py migrate
 
 echo "Starting server"
-gunicorn --bind 0.0.0.0:8000 backendApi.wsgi
+gunicorn --workers 3 --bind 0.0.0.0:8000 backendApi.wsgi
