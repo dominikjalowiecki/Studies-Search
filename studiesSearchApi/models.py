@@ -98,7 +98,8 @@ class Faculties(models.Model):
         images = self.images.all()
         return images[0] if images else None
     
-    def smart_truncate(self, content, length=100, suffix='...'):
+    @staticmethod
+    def smart_truncate(content, length=100, suffix='...'):
         if len(content) <= length:
             return content
         else:
@@ -106,7 +107,7 @@ class Faculties(models.Model):
 
     @property
     def description_preview(self):
-        return self.smart_truncate(self.description)
+        return Faculties.smart_truncate(self.description)
 
     class Meta:
         ordering = ['-modification_date']
