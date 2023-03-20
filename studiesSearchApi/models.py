@@ -26,7 +26,8 @@ class User(AbstractUser):
         'Membership',
         on_delete=models.RESTRICT,
         related_name='users',
-        null=True
+        null=True,
+        default=1
     )
     is_moderator = models.BooleanField(default=True)
     USERNAME_FIELD = 'email'
@@ -34,7 +35,7 @@ class User(AbstractUser):
 
     @property
     def username_and_membership(self):
-        return {'username': self.username, 'membership': str(self.membership or 'Admin')}
+        return {'username': self.username, 'membership': str(self.membership)}
 
 
 class Schools(models.Model):
@@ -143,7 +144,7 @@ class Comments(models.Model):
 
     @property
     def comment_details(self):
-        return {'username': self.user.username, 'membership': self.user.membership.name if self.user.membership != None else 'Admin', 'content': self.content, 'modification_date': self.modification_date}
+        return {'username': self.user.username, 'membership': self.user.membership.name, 'content': self.content, 'modification_date': self.modification_date}
     
     class Meta:
         ordering = ['-modification_date']
