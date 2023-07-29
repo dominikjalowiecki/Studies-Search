@@ -223,9 +223,9 @@ WHITENOISE_STATIC_PREFIX = '/static/'
 STATIC_URL = config('SCRIPT_NAME', default='') + WHITENOISE_STATIC_PREFIX
 
 DJOSER = {
-    'PASSWORD_RESET_CONFIRM_URL': 'studies-search/password/reset/confirm/{uid}/{token}',
-    'USERNAME_RESET_CONFIRM_URL': 'studies-search/username/reset/confirm/{uid}/{token}',
-    'ACTIVATION_URL': '#/activate/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL': 'studies-search/reset-password-confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL': 'studies-search/reset-username-confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'studies-search/activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     'USER_CREATE_PASSWORD_RETYPE': True,
     'SERIALIZERS': {
@@ -302,4 +302,5 @@ if not DEBUG:
     CORS_ORIGIN_WHITELIST = config('CORS_ORIGIN_WHITELIST', default='', cast=lambda v: [s.strip() for s in v.split(',')])
 
 USE_X_FORWARDED_HOST = True
+APPEND_SLASH=False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

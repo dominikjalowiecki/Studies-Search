@@ -1,0 +1,7 @@
+node_modules
+build
+.eslintcache
+.env
+.gitignore
+.dockerignore
+Dockerfile.prod
