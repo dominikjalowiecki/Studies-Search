@@ -1,5 +1,15 @@
-version: "3.9"
+version: '3.9'
 services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: 'studies-search_frontend_container'
+    ports:
+      - '${SSF_HOST_PORT:-80}:80'
+    depends_on:
+      - backend
+    restart: always
   backend:
     build:
       context: ./
@@ -10,7 +20,7 @@ services:
       - SECRET_KEY=${SECRET_KEY}
       - ADMINS=${ADMINS}
       - SCRIPT_NAME=${SCRIPT_NAME:-}
-      - CORS_ORIGIN_WHITELIST=${CORS_ORIGIN_WHITELIST:-127.0.0.1}
+      - CORS_ORIGIN_WHITELIST=${CORS_ORIGIN_WHITELIST:-http://localhost}
       - DATABASE_URL=postgres://user:password@database/studies-search
       - GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE=${GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE}
       - EMAIL_HOST=${EMAIL_HOST}
@@ -22,11 +32,11 @@ services:
       - ./logs:/usr/src/app/logs
     ports:
       - '${SSB_HOST_PORT:-8000}:8000'
-    command: [ 'sh', '/usr/src/app/entrypoint.sh' ]
+    command: ['sh', '/usr/src/app/entrypoint.sh']
     restart: always
   database:
-    image: "postgres:15-alpine"
-    container_name: "studies-search_postgresql_container"
+    image: 'postgres:15-alpine'
+    container_name: 'studies-search_postgresql_container'
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
@@ -34,5 +44,4 @@ services:
     volumes:
       - ./postgresql/mount/:/var/lib/postgresql/data
     restart: always
-
 # docker compose up --build --detach

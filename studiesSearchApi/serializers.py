@@ -63,11 +63,11 @@ class ExtendsUserSerializer(UserSerializer):
 
 
 class ExtendsCurrentUserSerializer(UserSerializer):
-    membership = serializers.SlugRelatedField(slug_field="name", read_only=True)
+    membership = serializers.SlugRelatedField(slug_field="name", queryset=Membership.objects.all())
 
     class Meta:
         model = User
-        fields = (User._meta.pk.name, "username", settings.LOGIN_FIELD, "membership", "is_moderator") + tuple(
+        fields = (User._meta.pk.name, "username", settings.LOGIN_FIELD, "membership", "is_moderator", 'date_joined') + tuple(
             User.REQUIRED_FIELDS
         )
 
@@ -171,28 +171,31 @@ class FacultiesRetrieveSerializer(serializers.ModelSerializer):
         add_courses = validated_data.pop("add_courses")
         courses = []
         for course in add_courses:
-            courses.append(Courses.objects.get_or_create(**{"name": course})[0])
+            courses.append(Courses.objects.get_or_create(**{"name": course.title()})[0])
 
-        school = Schools.objects.get_or_create(**{"name": validated_data.pop("add_school")})[0]
-        city = Cities.objects.get_or_create(**{"name": validated_data.pop("add_city")})[0]
+        school = Schools.objects.get_or_create(**{"name": validated_data.pop("add_school").title()})[0]
+        city = Cities.objects.get_or_create(**{"name": validated_data.pop("add_city").title()})[0]
         validated_data = {**validated_data, "school": school, "city": city}
         instance = Faculties.objects.create(**validated_data)
         instance.courses.set(courses)
 
-        try:
-            for uploaded_item in uploaded_data:
+        for uploaded_item in uploaded_data:
+            try:
                 FacultiesImages.objects.create(faculty=instance, image=uploaded_item)
-        except:
-            pass
+            except:
+                pass
 
         return instance
 
     @transaction.atomic
     def update(self, instance, validated_data):
+        uploaded_data = validated_data.get("uploaded_images")
+
         instance.name = validated_data.get("name", instance.name)
         instance.description = validated_data.get("description", instance.description)
         instance.school = Schools.objects.get_or_create(**{"name": validated_data.get("add_school", instance.school)})[0]
         instance.city = Cities.objects.get_or_create(**{"name": validated_data.get("add_city", instance.city)})[0]
+        instance.hyperlink = validated_data.get("hyperlink", instance.hyperlink)
 
         add_courses = validated_data.get("add_courses")
         if add_courses != None:
@@ -200,6 +203,14 @@ class FacultiesRetrieveSerializer(serializers.ModelSerializer):
             for course in add_courses:
                 courses.append(Courses.objects.get_or_create(**{"name": course})[0])
             instance.courses.set(courses)
+        
+        if uploaded_data:
+            FacultiesImages.objects.filter(faculty=instance).delete()
+            for uploaded_item in uploaded_data:
+                try:
+                    FacultiesImages.objects.create(faculty=instance, image=uploaded_item)
+                except:
+                    pass
 
         instance.save()
         return instance

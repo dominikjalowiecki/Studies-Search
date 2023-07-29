@@ -1,0 +1,63 @@
+{
+  "name": "studies-search",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.10",
+    "@chakra-ui/react": "^2.3.1",
+    "@chakra-ui/skip-nav": "^2.0.9",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@react-pdf/renderer": "^3.1.12",
+    "@sentry/cli": "^2.20.1",
+    "@sentry/react": "^7.60.1",
+    "@sentry/tracing": "^7.28.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^7.10.3",
+    "fslightbox-react": "^1.7.6",
+    "luxon": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.10",
+    "react-helmet": "^6.1.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "swr": "^2.2.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "starte": "CHOKIDAR_USEPOLLING=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently --kill-others \"npm start\" \"python ../manage.py runserver\"",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org student-n5t --project javascript-react ./build/static/js && sentry-cli sourcemaps upload --org student-n5t --project javascript-react ./build/static/js",
+    "react-scripts build": "react-scripts build && npm run sentry:sourcemaps"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://127.0.0.1:8000/api",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

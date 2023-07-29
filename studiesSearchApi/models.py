@@ -26,7 +26,7 @@ class User(AbstractUser):
         'Membership',
         on_delete=models.RESTRICT,
         related_name='users',
-        null=True,
+        null=False,
         default=1
     )
     is_moderator = models.BooleanField(default=True)
@@ -96,7 +96,7 @@ class Faculties(models.Model):
 
     @property
     def first_image(self):
-        images = self.images.all()
+        images = self.images.all().order_by('id').only('image')
         return images[0] if images else None
     
     @staticmethod

@@ -5,7 +5,6 @@ from django.conf import settings
 from rest_framework.routers import DefaultRouter
 from studiesSearchApi.urls import router as apiRouter
 from djoser.urls.base import router as djoserRouter
-from django.views.generic.base import TemplateView
 from django.contrib import admin
 
 admin.autodiscover()
