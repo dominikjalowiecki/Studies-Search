@@ -53,12 +53,14 @@ export default function PostsListing({ data }) {
               >
                 <Image
                   src={
-                    post.first_image.indexOf('&export=download') !== -1
-                      ? post.first_image.substring(
-                          0,
-                          post.first_image.indexOf('&export=download')
-                        )
-                      : post.first_image
+                    post.first_image
+                      ? post.first_image.indexOf('&export=download') !== -1
+                        ? post.first_image.substring(
+                            0,
+                            post.first_image.indexOf('&export=download')
+                          )
+                        : post.first_image
+                      : img
                   }
                   fallbackSrc={img}
                   width='100%'

@@ -16,9 +16,11 @@ export default memo(function PostImages({ images }) {
     });
   }
 
-  const corsImages = images.map(
-    (el) => 'https://corsproxy.io/?' + encodeURIComponent(el)
-  );
+  const DEBUG = process.env.NODE_ENV === 'development';
+
+  const corsImages = DEBUG
+    ? images
+    : images.map((el) => 'https://corsproxy.io/?' + encodeURIComponent(el));
 
   return images.length !== 0 ? (
     <>

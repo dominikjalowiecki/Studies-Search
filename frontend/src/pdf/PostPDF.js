@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
   },
 });
 
+const DEBUG = process.env.NODE_ENV === 'development';
+
 const PostPDF = ({
   post: {
     images: [image],
@@ -52,12 +54,14 @@ const PostPDF = ({
           style={{ width: '275px', marginBottom: '20px' }}
           src={
             image
-              ? 'https://corsproxy.io/?' +
-                encodeURIComponent(
-                  image.indexOf('&export=download') !== -1
-                    ? image.substring(0, image.indexOf('&export=download'))
-                    : image
-                )
+              ? DEBUG
+                ? image
+                : 'https://corsproxy.io/?' +
+                  encodeURIComponent(
+                    image.indexOf('&export=download') !== -1
+                      ? image.substring(0, image.indexOf('&export=download'))
+                      : image
+                  )
               : img
           }
         />

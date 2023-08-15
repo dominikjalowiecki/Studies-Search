@@ -50,7 +50,7 @@ const PostService = {
           window.history.replaceState(
             null,
             '',
-            process.env.REACT_APP_BASENAME +
+            (process.env.REACT_APP_BASENAME || '') +
               '/faculties/' +
               encodeURIComponent(
                 data.name.toLowerCase().split(' ').join('-') + `-${id}`

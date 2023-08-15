@@ -38,8 +38,10 @@ export default function Comments({ comments }) {
   }, [comments, page]);
 
   const loadComments = () => {
-    setPage((current) => ++current);
-    setCommentsLoading(true);
+    if (!!comments && comments.length > page * config.COMMENTS_PAGINATION) {
+      setPage((current) => ++current);
+      setCommentsLoading(true);
+    }
   };
 
   // const entranceAnimation = `${animation} alternate 3s 1s`;
@@ -59,16 +61,11 @@ export default function Comments({ comments }) {
         threshold: 1.0,
       }
     );
-    if (
-      ref.current !== null &&
-      !!comments &&
-      comments.length > page * config.COMMENTS_PAGINATION
-    ) {
-      observer.observe(ref.current);
-    }
+
+    observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, [isIntersecting, comments]);
+  }, [isIntersecting]);
 
   useEffect(() => {
     if (isIntersecting) {
@@ -103,6 +100,7 @@ export default function Comments({ comments }) {
           <VStack spacing={8} align='stretch' pr={2}>
             {!!displayComments &&
               displayComments.map((el, idx) => (
+                // <WrapItem key={idx}></WrapItem>
                 <VStack
                   bg='teal.100'
                   p={2}
@@ -148,7 +146,7 @@ export default function Comments({ comments }) {
                 <Spinner size='xl' />
               </Center>
             )}
-            {!!displayComments && <Box height='100px' ref={ref} />}
+            <Box height='100px' ref={ref} />
           </VStack>
         </Box>
       </Skeleton>
