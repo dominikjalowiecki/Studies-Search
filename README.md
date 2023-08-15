@@ -111,7 +111,7 @@ pipenv run run
 Requires additional SMTP and Google Drive API key setup.
 
 ```bash
-docker compose up -f docker-compose.dev.yaml -p studies-search_dev -d
+docker compose -f docker-compose.dev.yaml -p studies-search_dev up -d
 ```
 
 Application available on http://localhost:80 for frontend and http://localhost:8000 for backend.
