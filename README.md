@@ -1,4 +1,5 @@
 [![Preview project](https://img.shields.io/static/v1?label=Django&message=Preview&color=green&style=flat&logo=Django)][preview]
+![example workflow](https://github.com/dominikjalowiecki/Studies-Search/actions/workflows/publishimages.yml/badge.svg)
 
 # Studies-Search
 
