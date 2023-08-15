@@ -59,15 +59,18 @@ export default function Comments({ comments }) {
         threshold: 1.0,
       }
     );
-    if (!!comments && comments.length > page * config.COMMENTS_PAGINATION) {
-      observer.observe(ref.current);
-    }
+
+    observer.observe(ref.current);
 
     return () => observer.disconnect();
   }, [isIntersecting, comments]);
 
   useEffect(() => {
-    if (isIntersecting) {
+    if (
+      isIntersecting &&
+      !!comments &&
+      comments.length > page * config.COMMENTS_PAGINATION
+    ) {
       loadComments();
     }
   }, [isIntersecting]);

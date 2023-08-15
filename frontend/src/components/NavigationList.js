@@ -17,8 +17,9 @@ export default function NavigationList({ isVertical, closeMenu }) {
 
   const menuClick = useCallback((e) => {
     if (
-      e.target.classList.contains('chakra-link') ||
-      e.target.classList.contains('chakra-button')
+      closeMenu !== undefined &&
+      (e.target.classList.contains('chakra-link') ||
+        e.target.classList.contains('chakra-button'))
     )
       closeMenu();
   });

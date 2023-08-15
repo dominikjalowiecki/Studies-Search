@@ -13,7 +13,7 @@ import PostService from '../services/PostService.js';
 import Pagination from './Pagination';
 import { AuthConsumer } from '../utils/auth';
 import React, { Suspense } from 'react';
-import * as Sentry from '@sentry/react';
+import { ErrorBoundary } from 'react-error-boundary';
 import PostsListing from './PostsListing';
 import theme from '../themes/theme';
 
@@ -107,7 +107,7 @@ export default function Posts({ filters, searchParamsValidated, setPage }) {
                 size='xl'
               />
             </Flex>
-            <Sentry.ErrorBoundary
+            <ErrorBoundary
               FallbackComponent={FallbackComponent}
               // onReset={() => {
               //   setData(null);
@@ -115,7 +115,7 @@ export default function Posts({ filters, searchParamsValidated, setPage }) {
               resetKeys={[data]}
             >
               <PostsListing data={data} />
-            </Sentry.ErrorBoundary>
+            </ErrorBoundary>
             <Flex width='100%' justify='center' my='5'>
               <Pagination
                 setPage={setPage}
