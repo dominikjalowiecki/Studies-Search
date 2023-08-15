@@ -41,7 +41,8 @@ export default function PostsListing({ data }) {
               border='1px'
               borderColor={borderColor}
               w='100%'
-              minH='430px'
+              minH='450px'
+              overflow='hidden'
             >
               <Flex
                 h='200px'

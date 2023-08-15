@@ -87,7 +87,7 @@ export default function Posts({ searchParamsValidated }) {
       <Flex direction='column'>
         <Box bgGradient='linear(to-r, teal.600, teal.400)' height='250px'>
           <Box mx='auto' px='5' mt='50px' color='white'>
-            <Heading>Future belongs to you!</Heading>
+            <Heading size='lg'>Future belongs to you!</Heading>
             <Text>Find your career path.</Text>
           </Box>
         </Box>

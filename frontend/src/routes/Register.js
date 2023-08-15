@@ -174,6 +174,9 @@ export default function Register() {
             <FormErrorMessage>
               {formData.formErrors['username']}
             </FormErrorMessage>
+            <FormHelperText>
+              Can contain word characters, '.', '@', '+' or '-'.
+            </FormHelperText>
           </FormControl>
           <FormControl isInvalid={formData.formErrors['email']} isRequired>
             <FormLabel>Email</FormLabel>

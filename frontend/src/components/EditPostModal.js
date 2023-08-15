@@ -43,6 +43,7 @@ export default function EditPostModal({ isOpen, onClose, post, mutate }) {
       hyperlink: '',
       images: '',
       name: '',
+      description: '',
       add_courses: '',
       '': '',
     },
@@ -95,6 +96,9 @@ export default function EditPostModal({ isOpen, onClose, post, mutate }) {
     switch (fieldName) {
       case 'name':
         fieldValidationErrors.name = '';
+        break;
+      case 'description':
+        fieldValidationErrors.description = '';
         break;
       case 'add_city':
         cityValid = /^[a-zA-Z ]*$/.test(value);
@@ -203,8 +207,7 @@ export default function EditPostModal({ isOpen, onClose, post, mutate }) {
     courses,
     hyperlink,
   }) => {
-    let formRequestErrors = formData.formErrors;
-    formRequestErrors = {};
+    let formRequestErrors = {};
     setFormData({
       ...formData,
       formErrors: formRequestErrors,
@@ -242,7 +245,9 @@ export default function EditPostModal({ isOpen, onClose, post, mutate }) {
     )
       .then((res) => res.json())
       .then((json) => {
-        mutate(json);
+        mutate(json, {
+          revalidate: false,
+        });
         onClose();
       })
       .catch((error) => {
@@ -340,7 +345,10 @@ export default function EditPostModal({ isOpen, onClose, post, mutate }) {
                   {formData.formErrors['name']}
                 </FormErrorMessage>
               </FormControl>
-              <FormControl isRequired>
+              <FormControl
+                isInvalid={formData.formErrors['description']}
+                isRequired
+              >
                 <FormLabel>Description</FormLabel>
                 <Textarea
                   name='description'
@@ -351,6 +359,9 @@ export default function EditPostModal({ isOpen, onClose, post, mutate }) {
                 >
                   {formData.description}
                 </Textarea>
+                <FormErrorMessage>
+                  {formData.formErrors['description']}
+                </FormErrorMessage>
               </FormControl>
               <FormControl
                 isInvalid={formData.formErrors['add_city']}

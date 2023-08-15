@@ -9,6 +9,7 @@ const ImageSlider = ({ setToggler, images }) => {
       onClick
       infiniteLoop
       width='100%'
+      dynamicHeight={true}
       showStatus={false}
       onClickItem={(idx, item) => {
         setToggler(idx + 1);

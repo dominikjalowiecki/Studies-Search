@@ -1,7 +1,7 @@
 import django_filters
 from studiesSearchApi.models import Faculties
 
-class FacuilitesFilter(django_filters.FilterSet):
+class FacultiesFilter(django_filters.FilterSet):
     faculty = django_filters.CharFilter(
         field_name='name',
         lookup_expr='contains'

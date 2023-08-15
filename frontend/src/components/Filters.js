@@ -180,15 +180,12 @@ export default function Filters({
             <Button
               type='submit'
               size='md'
-              px='10'
               colorScheme={hasFilterChanged ? 'red' : 'gray'}
               leftIcon={<SearchIcon />}
             >
               Search
             </Button>
-            <Button px='10' onClick={handleClearButton}>
-              Clear
-            </Button>
+            <Button onClick={handleClearButton}>Clear</Button>
           </HStack>
         </Stack>
       </form>

@@ -1,9 +1,9 @@
 import { AuthConsumer } from '../utils/auth';
 import { Link as RouterLink } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Link, Button, List, ListItem, Spinner } from '@chakra-ui/react';
 
-export default function NavigationList({ isVertical }) {
+export default function NavigationList({ isVertical, closeMenu }) {
   const { authed, is_user_loading, logout } = AuthConsumer();
 
   const [submit, setSubmit] = useState(false);
@@ -15,12 +15,21 @@ export default function NavigationList({ isVertical }) {
     });
   };
 
+  const menuClick = useCallback((e) => {
+    if (
+      e.target.classList.contains('chakra-link') ||
+      e.target.classList.contains('chakra-button')
+    )
+      closeMenu();
+  });
+
   return (
     <List
       display='flex'
       flexDirection={isVertical ? 'column' : 'row'}
       justifyContent={'center'}
       alignItems={isVertical ? 'start' : 'center'}
+      onClick={menuClick}
       gap={3}
     >
       <ListItem>

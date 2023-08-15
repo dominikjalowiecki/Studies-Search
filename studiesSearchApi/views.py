@@ -10,7 +10,7 @@ from studiesSearchApi.serializers import (
     FiltersSerializer
 )
 from studiesSearchApi.permissions import IsModerator
-from studiesSearchApi.filters import FacuilitesFilter
+from studiesSearchApi.filters import FacultiesFilter
 from rest_framework import viewsets, permissions, mixins
 from rest_framework.response import Response
 from studiesSearchApi.models import Schools, Cities, Courses
@@ -54,7 +54,7 @@ class FacultiesViewSet(
     viewsets.GenericViewSet
 ):
     queryset = Faculties.objects.all()
-    filterset_class = FacuilitesFilter
+    filterset_class = FacultiesFilter
     permission_classes = [IsModerator]
 
     @method_decorator(cache_page(60 * 2, key_prefix="posts"))

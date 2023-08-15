@@ -18,7 +18,6 @@ export function login(dispatch, { email, password }) {
         const data = await response.json();
 
         localStorage.setItem('auth_token', data.auth_token);
-        localStorage.setItem('is_moderator', data.is_moderator);
 
         dispatch({
           type: AUTH_ACTION_TYPES.CLEAR_ERRORS,
@@ -61,18 +60,14 @@ export function logout(dispatch, cache) {
         },
       },
       [401]
-    )
-      .then(() => {
-        localStorage.removeItem('auth_token');
-        localStorage.removeItem('is_moderator');
+    ).finally(() => {
+      localStorage.removeItem('auth_token');
 
-        cache.delete('/users/me/');
+      cache.delete('/users/me/');
 
-        dispatch({ type: AUTH_ACTION_TYPES.LOGOUT });
-      })
-      .finally(() => {
-        resolve();
-      });
+      dispatch({ type: AUTH_ACTION_TYPES.LOGOUT });
+      resolve();
+    });
   });
 }
 

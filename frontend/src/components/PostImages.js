@@ -16,12 +16,16 @@ export default memo(function PostImages({ images }) {
     });
   }
 
+  const corsImages = images.map(
+    (el) => 'https://corsproxy.io/?' + encodeURIComponent(el)
+  );
+
   return images.length !== 0 ? (
     <>
       <ImageSlider setToggler={openLightboxOnSlide} images={images} />
       <FsLightbox
         toggler={lightboxController.toggler}
-        sources={images}
+        sources={corsImages}
         slide={lightboxController.slide}
       />
     </>

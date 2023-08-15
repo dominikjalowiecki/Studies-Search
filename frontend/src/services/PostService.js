@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import useSWR, { preload } from 'swr';
+import useSWRImmutable from 'swr/immutable';
 
 const PostService = {
   GetPosts: (filters, searchParamsValidated, setPage) => {
@@ -39,7 +40,7 @@ const PostService = {
     return data;
   },
   GetPost: (id) => {
-    const { data, error, isLoading, isValidating, mutate } = useSWR(
+    const { data, error, isLoading, isValidating, mutate } = useSWRImmutable(
       `/faculties/${id}/`,
       (url) => {
         return fetch(url, {}, [404]).then((response) => response.json());
@@ -49,7 +50,8 @@ const PostService = {
           window.history.replaceState(
             null,
             '',
-            '/faculties/' +
+            process.env.REACT_APP_BASENAME +
+              '/faculties/' +
               encodeURIComponent(
                 data.name.toLowerCase().split(' ').join('-') + `-${id}`
               )

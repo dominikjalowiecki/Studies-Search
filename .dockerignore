@@ -10,3 +10,4 @@ frontend
 Dockerfile.prod
 docker-compose.yaml
 postgresql
+studies-search-service-account.json
