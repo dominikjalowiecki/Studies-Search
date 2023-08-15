@@ -1,8 +1,9 @@
 name: Create and publish a Docker images
 
 on:
-  release:
-    types: ['published']
+  push:
+    branches:
+      - main
 
 env:
   REGISTRY: ghcr.io/dominikjalowiecki
@@ -45,7 +46,8 @@ jobs:
           push: true
           tags: ${{ steps.meta_frontend.outputs.tags }}
           labels: ${{ steps.meta_frontend.outputs.labels }}
-          build-args: PUBLIC_URL=${{ vars.PUBLIC_URL }}
+          build-args: |
+            PUBLIC_URL=${{ vars.PUBLIC_URL }}
             REACT_APP_SERVER_URL=${{ vars.REACT_APP_SERVER_URL }}
             REACT_APP_SENTRY_DSN=${{ secrets.REACT_APP_SENTRY_DSN }}
             REACT_APP_BASENAME=${{ vars.REACT_APP_BASENAME }}
