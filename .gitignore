@@ -133,3 +133,4 @@ dmypy.json
 /static
 /*.json
 postgresql
+ss-deploy.sh

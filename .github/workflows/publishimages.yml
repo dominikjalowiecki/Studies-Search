@@ -12,6 +12,8 @@ env:
 
 jobs:
   build-and-push-image:
+    name: Build and publish Docker images
+
     runs-on: ubuntu-latest
 
     environment: production
@@ -68,3 +70,22 @@ jobs:
           push: true
           tags: ${{ steps.meta_backend.outputs.tags }}
           labels: ${{ steps.meta_backend.outputs.labels }}
+  trigger-server:
+    name: Trigger server deployment
+
+    runs-on: ubuntu-latest
+
+    environment: production
+
+    needs: build-and-push-image
+
+    steps:
+      - name: Execute SSH forced command
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          script: date
