@@ -33,8 +33,7 @@ services:
       - EMAIL_HOST_USER=${EMAIL_HOST_USER}
       - EMAIL_HOST_PASSWORD=${EMAIL_HOST_PASSWORD}
     secrets:
-      google_service_account:
-        file: ./studies-search-service-account.json
+      - google_service_account
     depends_on:
       - database
     volumes:
@@ -53,4 +52,7 @@ services:
     volumes:
       - ./postgresql/mount/:/var/lib/postgresql/data
     restart: always
+secrets:
+  google_service_account:
+    file: ./studies-search-service-account.json
 # docker compose up --build --detach
