@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  REGISTRY: dominikjalowiecki
+  REGISTRY: ghcr.io/dominikjalowiecki
   FRONTEND_IMAGE_NAME: studies-search_frontend
   BACKEND_IMAGE_NAME: studies-search_backend
 
