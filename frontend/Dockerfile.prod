@@ -23,7 +23,7 @@ RUN npm ci --silent
 
 COPY . ./
 
-RUN npm run build
+RUN npm run "react-scripts build"
 
 # Production environment
 FROM nginx:stable-alpine
