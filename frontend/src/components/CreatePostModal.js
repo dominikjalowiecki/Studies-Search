@@ -44,6 +44,7 @@ export default function CreatePostModal({ isOpen, onClose }) {
       hyperlink: '',
       images: '',
       name: '',
+      description: '',
       add_courses: '',
       '': '',
     },
@@ -98,6 +99,9 @@ export default function CreatePostModal({ isOpen, onClose }) {
     switch (fieldName) {
       case 'name':
         fieldValidationErrors.name = '';
+        break;
+      case 'description':
+        fieldValidationErrors.description = '';
         break;
       case 'add_city':
         cityValid = /^[a-zA-Z ]*$/.test(value);
@@ -206,8 +210,7 @@ export default function CreatePostModal({ isOpen, onClose }) {
     courses,
     hyperlink,
   }) => {
-    let formRequestErrors = formData.formErrors;
-    formRequestErrors = {};
+    let formRequestErrors = {};
     setFormData({
       ...formData,
       formErrors: formRequestErrors,
@@ -347,7 +350,10 @@ export default function CreatePostModal({ isOpen, onClose }) {
                   {formData.formErrors['name']}
                 </FormErrorMessage>
               </FormControl>
-              <FormControl isRequired>
+              <FormControl
+                isInvalid={formData.formErrors['description']}
+                isRequired
+              >
                 <FormLabel>Description</FormLabel>
                 <Textarea
                   name='description'
@@ -358,6 +364,9 @@ export default function CreatePostModal({ isOpen, onClose }) {
                 >
                   {formData.description}
                 </Textarea>
+                <FormErrorMessage>
+                  {formData.formErrors['description']}
+                </FormErrorMessage>
               </FormControl>
               <FormControl
                 isInvalid={formData.formErrors['add_city']}

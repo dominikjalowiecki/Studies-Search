@@ -115,11 +115,11 @@ export default function Post() {
                   templateRows={'2'}
                   gap={3}
                 >
-                  <GridItem colStart='1' rowStart='1'>
+                  <GridItem colStart='1' rowStart='1' overflowX='auto'>
                     <PostImages images={data.images} />
                   </GridItem>
-                  <GridItem colStart='1' rowStart='2'>
-                    <VStack align={'flex-start'}>
+                  <GridItem colStart='1' rowStart='2' overflow='hidden'>
+                    <VStack align={'flex-start'} flexWrap='wrap'>
                       <Heading>{data.name}</Heading>
                       <Wrap>
                         {is_moderator && (

@@ -33,16 +33,16 @@ root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <SWRConfig
+      {/* <SWRConfig
         value={
           {
-            // refreshInterval: 5000,
-            // fetcher: ,
+            refreshInterval: 5000,
+            fetcher: ,
           }
         }
-      >
-        <Router />
-      </SWRConfig>
+      > */}
+      <Router />
+      {/* </SWRConfig> */}
     </ChakraProvider>
   </React.StrictMode>
 );

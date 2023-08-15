@@ -22,7 +22,7 @@ import {
   VisuallyHidden,
   Divider,
 } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
 import { SkipNavLink } from '@chakra-ui/skip-nav';
 import NavigationList from './NavigationList';
 import theme from '../themes/theme';
@@ -54,10 +54,12 @@ export default function Header() {
   const DarkModeToggle = () => (
     <Box>
       <Text>
+        <SunIcon />{' '}
         <Switch
           onChange={toggleColorMode}
           isChecked={colorMode === 'dark' ? true : false}
-        />
+        />{' '}
+        <MoonIcon />
       </Text>
     </Box>
   );
@@ -121,7 +123,7 @@ export default function Header() {
                 <DrawerCloseButton />
                 <DrawerHeader>Menu</DrawerHeader>
                 <DrawerBody>
-                  <NavigationList isVertical={true} />
+                  <NavigationList isVertical={true} closeMenu={onClose} />
                   <Divider my={3} />
                   <HeaderAddon />
                   <Divider my={3} />

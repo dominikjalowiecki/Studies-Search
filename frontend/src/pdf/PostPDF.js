@@ -50,14 +50,16 @@ const PostPDF = ({
       <View style={styles.section}>
         <Image
           style={{ width: '275px', marginBottom: '20px' }}
-          // src={
-          //   image
-          //     ? image.indexOf('&export=download') !== -1
-          //       ? image.substring(0, image.indexOf('&export=download'))
-          //       : image
-          //     : img
-          // }
-          src={img}
+          src={
+            image
+              ? 'https://corsproxy.io/?' +
+                encodeURIComponent(
+                  image.indexOf('&export=download') !== -1
+                    ? image.substring(0, image.indexOf('&export=download'))
+                    : image
+                )
+              : img
+          }
         />
         <Text>Name: {name}</Text>
         <Text>Description: {description}</Text>

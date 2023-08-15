@@ -9,7 +9,7 @@ Project's OpenAPI schema available on path "/static/openapi.json". <br/>
 [Link to API documentation.](https://djalowiecki.toadres.pl/studies-search/api/static/api_documentation.html)<br/>
 [Link to Swagger UI.](https://djalowiecki.toadres.pl/studies-search/api/static/swagger/index.html)
 
-- [] Application uses Continuous Delivery solution built upon GitHub Actions and GitHub Container Registry.
+- [x] Application uses Continuous Delivery solution built upon GitHub Actions and GitHub Container Registry.
 
 [preview]: https://djalowiecki.toadres.pl/studies-search/
 
@@ -110,7 +110,7 @@ pipenv run run
 Requires additional SMTP and Google Drive API key setup.
 
 ```bash
-docker compose up -d
+docker compose up -f docker-compose.dev.yaml -p studies-search_dev -d
 ```
 
 Application available on http://localhost:80 for frontend and http://localhost:8000 for backend.

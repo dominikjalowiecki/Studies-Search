@@ -36,7 +36,7 @@
     "eject": "react-scripts eject",
     "dev": "concurrently --kill-others \"npm start\" \"python ../manage.py runserver\"",
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org student-n5t --project javascript-react ./build/static/js && sentry-cli sourcemaps upload --org student-n5t --project javascript-react ./build/static/js",
-    "react-scripts build": "react-scripts build && npm run sentry:sourcemaps"
+    "react-scripts build": "react-scripts build && npm run sentry:sourcemaps && rm -rf ./build/static/js/*.map"
   },
   "eslintConfig": {
     "extends": [

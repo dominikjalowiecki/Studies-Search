@@ -58,14 +58,18 @@ function useAuth() {
     }
   };
 
-  const { data: user } = useSWRImmutable(
+  const { data: user, error } = useSWRImmutable(
     authState.authed ? '/users/me/' : null,
     (url) => {
-      return authFetch(url).then((response) => response.json());
+      return authFetch(url, {}, [401]).then((response) => response.json());
     }
   );
 
   const { cache } = useSWRConfig();
+
+  if (error) {
+    logoutAction(dispatch, cache);
+  }
 
   return {
     authed: authState.authed,

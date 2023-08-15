@@ -14,6 +14,7 @@ import {
   FormLabel,
   FormErrorMessage,
   Select,
+  FormHelperText,
 } from '@chakra-ui/react';
 import { useRef, useState, useEffect } from 'react';
 import useSWRImmutable from 'swr/immutable';
@@ -180,13 +181,12 @@ export default function UpdateUser({ toast }) {
                     value={formData.username}
                     onChange={handleUserInput}
                   />
-                  {!formData.usernameValid ? (
-                    <FormErrorMessage>
-                      {formData.formErrors['username']}
-                    </FormErrorMessage>
-                  ) : (
-                    ''
-                  )}
+                  <FormErrorMessage>
+                    {formData.formErrors['username']}
+                  </FormErrorMessage>
+                  <FormHelperText>
+                    Can contain word characters, '.', '@', '+' or '-'.
+                  </FormHelperText>
                 </FormControl>
                 <FormControl>
                   <FormLabel>Membership</FormLabel>
@@ -208,7 +208,6 @@ export default function UpdateUser({ toast }) {
                 <FormErrors formErrors={formData.formErrors} />
               </VStack>
             </DrawerBody>
-
             <DrawerFooter>
               <Button mr={3} onClick={onClose}>
                 Cancel

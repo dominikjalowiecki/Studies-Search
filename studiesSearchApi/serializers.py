@@ -196,6 +196,7 @@ class FacultiesRetrieveSerializer(serializers.ModelSerializer):
         instance.school = Schools.objects.get_or_create(**{"name": validated_data.get("add_school", instance.school)})[0]
         instance.city = Cities.objects.get_or_create(**{"name": validated_data.get("add_city", instance.city)})[0]
         instance.hyperlink = validated_data.get("hyperlink", instance.hyperlink)
+        instance.modificated_by = validated_data['modificated_by']
 
         add_courses = validated_data.get("add_courses")
         if add_courses != None:
@@ -211,7 +212,7 @@ class FacultiesRetrieveSerializer(serializers.ModelSerializer):
                     FacultiesImages.objects.create(faculty=instance, image=uploaded_item)
                 except:
                     pass
-
+        
         instance.save()
         return instance
 

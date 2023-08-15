@@ -1,5 +1,6 @@
 import { DateTime } from 'luxon';
 import { useState, useEffect } from 'react';
+import { Text } from '@chakra-ui/react';
 
 export const useTime = (refresh = 1000) => {
   const [now, setNow] = useState(getTime());
@@ -18,5 +19,5 @@ const getTime = () => {
 };
 
 export const Clock = ({ time }) => (
-  <p>{time.setLocale('pl').toLocaleString(DateTime.DATETIME_SHORT)}</p>
+  <Text>{time.toLocaleString(DateTime.DATETIME_SHORT)}</Text>
 );
