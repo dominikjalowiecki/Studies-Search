@@ -99,7 +99,7 @@ export default function Post() {
     <>
       <Box mt='10'>
         {!error ? (
-          !isLoading ? (
+          !!data ? (
             <Flex justify='center'>
               <Suspense>
                 <EditPostModal

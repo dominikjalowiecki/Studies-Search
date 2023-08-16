@@ -1,8 +1,9 @@
 name: Create and publish a Docker images
 
 on:
-  release:
-    types: ['published']
+  push:
+    branches:
+      - main
 
 env:
   REGISTRY: ghcr.io/dominikjalowiecki
