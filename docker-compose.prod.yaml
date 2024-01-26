@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   frontend:
-    image: 'ghcr.io/dominikjalowiecki/studies-search_frontend:main'
+    image: 'ghcr.io/dominikjalowiecki/studies-search_frontend:latest'
     container_name: 'studies-search_frontend_container'
     ports:
       - '${SSF_HOST_PORT:-80}:80'
@@ -9,7 +9,7 @@ services:
       - backend
     restart: always
   backend:
-    image: 'ghcr.io/dominikjalowiecki/studies-search_backend:main'
+    image: 'ghcr.io/dominikjalowiecki/studies-search_backend:latest'
     container_name: 'studies-search_backend_container'
     environment:
       - ALLOWED_HOSTS=${ALLOWED_HOSTS:-127.0.0.1}
