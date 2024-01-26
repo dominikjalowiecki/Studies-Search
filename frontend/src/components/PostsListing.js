@@ -16,6 +16,7 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import img from '../assets/images/default-thumbnail.jpeg';
+import { generateGoogleDriveURL } from '../utils';
 
 export default function PostsListing({ data }) {
   const borderColor = useColorModeValue('gray.300', 'whiteAlpha.200');
@@ -54,11 +55,10 @@ export default function PostsListing({ data }) {
                 <Image
                   src={
                     post.first_image
-                      ? post.first_image.indexOf('&export=download') !== -1
-                        ? post.first_image.substring(
-                            0,
-                            post.first_image.indexOf('&export=download')
-                          )
+                      ? post.first_image.indexOf(
+                          'https://drive.google.com/uc?id='
+                        ) !== -1
+                        ? generateGoogleDriveURL(post.first_image)
                         : post.first_image
                       : img
                   }

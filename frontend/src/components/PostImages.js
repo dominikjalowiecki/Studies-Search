@@ -2,6 +2,7 @@ import { useState, memo } from 'react';
 import FsLightbox from 'fslightbox-react';
 import img from '../assets/images/default-thumbnail.jpeg';
 import ImageSlider from '../components/ImageSlider';
+import { generateGoogleDriveURL } from '../utils';
 
 export default memo(function PostImages({ images }) {
   const [lightboxController, setLightboxController] = useState({
@@ -20,7 +21,15 @@ export default memo(function PostImages({ images }) {
 
   const corsImages = DEBUG
     ? images
-    : images.map((el) => 'https://corsproxy.io/?' + encodeURIComponent(el));
+    : images.map(
+        (el) =>
+          'https://corsproxy.io/?' +
+          encodeURIComponent(
+            el.indexOf('https://drive.google.com/uc?id=') !== -1
+              ? generateGoogleDriveURL(el)
+              : el
+          )
+      );
 
   return images.length !== 0 ? (
     <>

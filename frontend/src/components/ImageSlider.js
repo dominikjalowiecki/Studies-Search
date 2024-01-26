@@ -1,5 +1,6 @@
 import { Image } from '@chakra-ui/react';
 import { Carousel } from 'react-responsive-carousel';
+import { generateGoogleDriveURL } from '../utils';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../style.css';
 
@@ -23,8 +24,8 @@ const ImageSlider = ({ setToggler, images }) => {
           <Image
             key={idx}
             src={
-              image.indexOf('&export=download') !== -1
-                ? image.substring(0, image.indexOf('&export=download'))
+              image.indexOf('https://drive.google.com/uc?id=') !== -1
+                ? generateGoogleDriveURL(image)
                 : image
             }
           />
